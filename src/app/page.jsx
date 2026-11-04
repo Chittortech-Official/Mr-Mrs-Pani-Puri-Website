@@ -235,11 +235,11 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-6">
             {bestsellers.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl overflow-hidden border border-[#ECE7DE] hover:border-[#C4161C] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-[#ECE7DE] hover:border-[#C4161C] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group shadow-xs"
               >
                 <div>
                   {/* Food Image */}
@@ -248,51 +248,51 @@ export default function Home() {
                       src={item.image}
                       alt={item.name}
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
 
                     {/* Haldiram Style Veg Square Icon */}
-                    <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm p-1 rounded border border-[#22c55e] shadow-sm">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e]" />
+                    <div className="absolute top-2 left-2 bg-white/95 backdrop-blur-sm p-0.5 sm:p-1 rounded border border-[#22c55e] shadow-xs">
+                      <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#22c55e]" />
                     </div>
 
                     {/* Tag / Badge */}
                     {item.tag && (
-                      <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#C4161C] text-white text-[10px] font-bold uppercase tracking-wide shadow-md">
+                      <div className="absolute top-2 right-2 px-1.5 sm:px-2.5 py-0.5 rounded-full bg-[#C4161C] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wide shadow-xs">
                         {item.tag}
                       </div>
                     )}
                   </div>
 
                   {/* Product Details */}
-                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                  <div className="p-2.5 sm:p-4 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center justify-between gap-2 mb-1.5">
-                        <span className="text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold">
+                      <div className="flex items-center justify-between gap-1 mb-1">
+                        <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold truncate">
                           {item.categoryName}
                         </span>
-                        <span className="text-[10px] font-semibold px-2 py-0.5 rounded border border-[#E5DFD7] text-[#6B7280] bg-[#FAF7F2]">
+                        <span className="hidden sm:inline-block text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded border border-[#E5DFD7] text-[#6B7280] bg-[#FAF7F2]">
                           Fresh Daily
                         </span>
                       </div>
 
-                      <h4 className="font-serif font-bold text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1.5 line-clamp-1">
+                      <h4 className="font-serif font-bold text-xs sm:text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1 line-clamp-1">
                         {item.name}
                       </h4>
 
-                      <p className="text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-3">
+                      <p className="hidden sm:block text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-2.5">
                         {item.desc}
                       </p>
                     </div>
 
-                    <div className="pt-2 border-t border-[#F3EDE2] flex items-center justify-between mb-3">
+                    <div className="pt-1.5 sm:pt-2 border-t border-[#F3EDE2] flex items-center justify-between mb-2 sm:mb-3">
                       <div>
-                        <span className="text-[10px] text-[#9CA3AF] block font-medium">Daily Price</span>
-                        <span className="font-serif text-lg font-black text-[#C4161C]">
+                        <span className="hidden sm:block text-[9px] text-[#9CA3AF] font-medium leading-none mb-0.5">Daily Price</span>
+                        <span className="font-serif text-sm sm:text-lg font-black text-[#C4161C]">
                           ₹{item.price}/-
                         </span>
                       </div>
-                      <span className="text-[11px] text-[#15803D] font-bold bg-[#DCFCE7] px-2 py-0.5 rounded">
+                      <span className="text-[9px] sm:text-[11px] text-[#15803D] font-bold bg-[#DCFCE7] px-1.5 py-0.5 rounded">
                         100% Veg
                       </span>
                     </div>
@@ -300,17 +300,17 @@ export default function Home() {
                 </div>
 
                 {/* Direct WhatsApp Order Button (NO CART) */}
-                <div className="p-4 sm:p-5 pt-0">
+                <div className="p-2 sm:p-4 pt-0">
                   <a
                     href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
                       `Hello Mr Mrs Panipuriwala! I would like to order: *${item.name}* (₹${item.price}/-).`
                     )}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wider uppercase transition-colors shadow-md"
+                    className="w-full inline-flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 sm:py-2.5 px-2 rounded-lg sm:rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-colors shadow-xs hover:shadow-md"
                   >
-                    <MessageCircle size={15} />
-                    <span>Order on WhatsApp</span>
+                    <MessageCircle size={13} className="shrink-0" />
+                    <span className="truncate">Order on WhatsApp</span>
                   </a>
                 </div>
               </div>
@@ -336,95 +336,111 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-6">
 
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
-                  alt="Royal Combo Chaat"
-                  fill
-                  className="object-cover"
-                />
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+                    alt="Royal Combo Chaat"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-2.5 sm:p-4">
+                  <span className="text-[9px] sm:text-[10px] text-[#9CA3AF] uppercase font-semibold block mb-0.5">Chaat Special</span>
+                  <h4 className="font-bold text-xs sm:text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors line-clamp-1">
+                    5-in-1 Royal Combo Chaat Platter
+                  </h4>
+                  <p className="hidden sm:block text-xs text-[#6B7280] line-clamp-2 mb-2.5">
+                    2 Sev Puri, 2 Ragada Puri, 2 Dahi Puri, 2 Tokri Chaat & 2 Masala Puri served in one grand royal plate.
+                  </p>
+                </div>
               </div>
-              <div className="p-4">
-                <span className="text-[10px] text-[#9CA3AF] uppercase font-semibold">Chaat Special</span>
-                <h4 className="font-bold text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors">
-                  5-in-1 Royal Combo Chaat Platter
-                </h4>
-                <p className="text-xs text-[#6B7280] line-clamp-2 mb-3">
-                  2 Sev Puri, 2 Ragada Puri, 2 Dahi Puri, 2 Tokri Chaat & 2 Masala Puri served in one grand royal plate.
-                </p>
-                <Link href="/menu?cat=chaat" className="text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
+              <div className="p-2.5 sm:p-4 pt-0">
+                <Link href="/menu?cat=chaat" className="text-[11px] sm:text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
                   <span>Explore Chaats</span> →
                 </Link>
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80"
-                  alt="Grand Basket Chaat"
-                  fill
-                  className="object-cover"
-                />
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80"
+                    alt="Grand Basket Chaat"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-2.5 sm:p-4">
+                  <span className="text-[9px] sm:text-[10px] text-[#9CA3AF] uppercase font-semibold block mb-0.5">Dahi Indulgence</span>
+                  <h4 className="font-bold text-xs sm:text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors line-clamp-1">
+                    Grand Basket Chaat Supreme
+                  </h4>
+                  <p className="hidden sm:block text-xs text-[#6B7280] line-clamp-2 mb-2.5">
+                    Crispy edible potato basket overflowing with spiced sprouts, sweet churned curd, pomegranate & saunth.
+                  </p>
+                </div>
               </div>
-              <div className="p-4">
-                <span className="text-[10px] text-[#9CA3AF] uppercase font-semibold">Dahi Indulgence</span>
-                <h4 className="font-bold text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors">
-                  Grand Basket Chaat Supreme
-                </h4>
-                <p className="text-xs text-[#6B7280] line-clamp-2 mb-3">
-                  Crispy edible potato basket overflowing with spiced sprouts, sweet churned curd, pomegranate & saunth.
-                </p>
-                <Link href="/menu?cat=dahichaat" className="text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
+              <div className="p-2.5 sm:p-4 pt-0">
+                <Link href="/menu?cat=dahichaat" className="text-[11px] sm:text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
                   <span>Explore Dahi Chaats</span> →
                 </Link>
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
-                  alt="Royal Paan Shake"
-                  fill
-                  className="object-cover"
-                />
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
+                    alt="Royal Paan Shake"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-2.5 sm:p-4">
+                  <span className="text-[9px] sm:text-[10px] text-[#9CA3AF] uppercase font-semibold block mb-0.5">Beverages</span>
+                  <h4 className="font-bold text-xs sm:text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors line-clamp-1">
+                    Signature Royal Paan Shake
+                  </h4>
+                  <p className="hidden sm:block text-xs text-[#6B7280] line-clamp-2 mb-2.5">
+                    Infused with natural betel leaf, scented gulkand, rich cream, and traditional cooling spices.
+                  </p>
+                </div>
               </div>
-              <div className="p-4">
-                <span className="text-[10px] text-[#9CA3AF] uppercase font-semibold">Beverages</span>
-                <h4 className="font-bold text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors">
-                  Signature Royal Paan Shake
-                </h4>
-                <p className="text-xs text-[#6B7280] line-clamp-2 mb-3">
-                  Infused with natural betel leaf, scented gulkand, rich cream, and traditional cooling spices.
-                </p>
-                <Link href="/menu?cat=shakes" className="text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
+              <div className="p-2.5 sm:p-4 pt-0">
+                <Link href="/menu?cat=shakes" className="text-[11px] sm:text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
                   <span>Explore Shakes</span> →
                 </Link>
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80"
-                  alt="Lotus Biscoff Frappe"
-                  fill
-                  className="object-cover"
-                />
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80"
+                    alt="Lotus Biscoff Frappe"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-2.5 sm:p-4">
+                  <span className="text-[9px] sm:text-[10px] text-[#9CA3AF] uppercase font-semibold block mb-0.5">Artisan Cafe</span>
+                  <h4 className="font-bold text-xs sm:text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors line-clamp-1">
+                    Lotus Biscoff Cold Frappe
+                  </h4>
+                  <p className="hidden sm:block text-xs text-[#6B7280] line-clamp-2 mb-2.5">
+                    Espresso blended with genuine speculoos cookie butter, whipped cream & crunchy caramelized biscuit crumb.
+                  </p>
+                </div>
               </div>
-              <div className="p-4">
-                <span className="text-[10px] text-[#9CA3AF] uppercase font-semibold">Artisan Cafe</span>
-                <h4 className="font-bold text-sm text-[#1F2937] mb-1 group-hover:text-[#C4161C] transition-colors">
-                  Lotus Biscoff Cold Frappe
-                </h4>
-                <p className="text-xs text-[#6B7280] line-clamp-2 mb-3">
-                  Espresso blended with genuine speculoos cookie butter, whipped cream & crunchy caramelized biscuit crumb.
-                </p>
-                <Link href="/menu?cat=coldcoffee" className="text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
+              <div className="p-2.5 sm:p-4 pt-0">
+                <Link href="/menu?cat=coldcoffee" className="text-[11px] sm:text-xs font-bold text-[#C4161C] hover:underline flex items-center gap-1">
                   <span>Explore Coffees</span> →
                 </Link>
               </div>

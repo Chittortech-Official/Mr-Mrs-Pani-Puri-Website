@@ -212,11 +212,11 @@ function MenuContent() {
           {/* Product Cards Grid (9 Cols on Desktop) */}
           <div className="lg:col-span-9">
             {filteredItems.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-4 md:gap-6">
                 {filteredItems.map((item) => (
                   <div
                     key={item.id}
-                    className="bg-white rounded-2xl overflow-hidden border border-[#ECE7DE] hover:border-[#C4161C] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                    className="bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-[#ECE7DE] hover:border-[#C4161C] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group shadow-xs"
                   >
                     <div>
                       {/* Product Image */}
@@ -225,51 +225,51 @@ function MenuContent() {
                           src={item.image}
                           alt={item.name}
                           fill
-                          className="object-cover"
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
 
                         {/* Haldiram Style Veg Square */}
-                        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm p-1 rounded border border-[#22c55e] shadow-sm">
-                          <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e]" />
+                        <div className="absolute top-2 left-2 bg-white/95 backdrop-blur-sm p-0.5 sm:p-1 rounded border border-[#22c55e] shadow-xs">
+                          <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#22c55e]" />
                         </div>
 
                         {/* Tag */}
                         {item.tag && (
-                          <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-[#C4161C] text-white text-[10px] font-bold uppercase tracking-wide shadow-md">
+                          <div className="absolute top-2 right-2 px-1.5 sm:px-2 py-0.5 rounded-full bg-[#C4161C] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wide shadow-xs">
                             {item.tag}
                           </div>
                         )}
                       </div>
 
                       {/* Info */}
-                      <div className="p-4 flex-1 flex flex-col justify-between">
+                      <div className="p-2.5 sm:p-4 flex-1 flex flex-col justify-between">
                         <div>
-                          <div className="flex items-center justify-between gap-2 mb-1.5">
-                            <span className="text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold">
+                          <div className="flex items-center justify-between gap-1 mb-1">
+                            <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold truncate">
                               {item.categoryName}
                             </span>
-                            <span className="text-[10px] font-semibold px-2 py-0.5 rounded border border-[#E5DFD7] text-[#6B7280] bg-[#FAF7F2]">
+                            <span className="hidden sm:inline-block text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded border border-[#E5DFD7] text-[#6B7280] bg-[#FAF7F2]">
                               Fresh Daily
                             </span>
                           </div>
 
-                          <h3 className="font-serif font-bold text-sm sm:text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1 line-clamp-1">
+                          <h3 className="font-serif font-bold text-xs sm:text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1 line-clamp-1">
                             {item.name}
                           </h3>
 
-                          <p className="text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-3 font-light">
+                          <p className="hidden sm:block text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-2.5 font-light">
                             {item.desc}
                           </p>
                         </div>
 
-                        <div className="pt-2 border-t border-[#F3EDE2] flex items-center justify-between mb-3">
+                        <div className="pt-1.5 sm:pt-2 border-t border-[#F3EDE2] flex items-center justify-between mb-2 sm:mb-3">
                           <div>
-                            <span className="text-[10px] text-[#9CA3AF] block font-medium">Daily Price</span>
-                            <span className="font-serif text-lg font-black text-[#C4161C]">
+                            <span className="hidden sm:block text-[9px] text-[#9CA3AF] font-medium leading-none mb-0.5">Daily Price</span>
+                            <span className="font-serif text-sm sm:text-lg font-black text-[#C4161C]">
                               ₹{item.price}/-
                             </span>
                           </div>
-                          <span className="text-[11px] text-[#15803D] font-bold bg-[#DCFCE7] px-2 py-0.5 rounded">
+                          <span className="text-[9px] sm:text-[11px] text-[#15803D] font-bold bg-[#DCFCE7] px-1.5 py-0.5 rounded">
                             100% Veg
                           </span>
                         </div>
@@ -277,17 +277,17 @@ function MenuContent() {
                     </div>
 
                     {/* WhatsApp Action Button (NO CART) */}
-                    <div className="p-4 pt-0">
+                    <div className="p-2 sm:p-4 pt-0">
                       <a
                         href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
                           `Hello Mr Mrs Panipuriwala! I would like to order: *${item.name}* (₹${item.price}/-).`
                         )}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wider uppercase transition-colors shadow-md"
+                        className="w-full inline-flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 sm:py-2.5 px-2 rounded-lg sm:rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-colors shadow-xs hover:shadow-md"
                       >
-                        <MessageCircle size={15} />
-                        <span>Order on WhatsApp</span>
+                        <MessageCircle size={13} className="shrink-0" />
+                        <span className="truncate">Order on WhatsApp</span>
                       </a>
                     </div>
                   </div>
