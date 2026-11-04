@@ -250,24 +250,6 @@ export default function HaldiramHeader() {
 
         </div>
 
-
-        {/* 3. Horizontal Category Ribbon (Desktop only - Mobile uses clean Hamburger Menu) */}
-        <div className="bg-[#FAF7F2] border-b border-[#ECE7DE] hidden md:block">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-1 text-xs font-semibold text-[#4A403A] py-2">
-            {categories.map((cat, idx) => (
-              <Link
-                key={cat.name}
-                href={cat.href}
-                className={`py-1 px-3 hover:text-[#C4161C] hover:bg-white rounded-md transition-colors whitespace-nowrap text-xs ${
-                  idx === 0 ? 'text-[#C4161C] font-bold bg-white shadow-xs' : ''
-                }`}
-              >
-                {cat.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-
       </header>
 
       {/* FULLSCREEN SOLID DRAWER MENU (Universal: Works on Laptop & Mobile without Glitch) */}
