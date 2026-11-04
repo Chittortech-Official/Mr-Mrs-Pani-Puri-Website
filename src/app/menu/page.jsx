@@ -4,7 +4,7 @@ import React, { useState, useMemo, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Search, MessageCircle, Filter, ArrowUpDown, Sparkles, Check, ChevronRight, X } from 'lucide-react';
+import { Search, MessageCircle, Filter, ArrowUpDown, Sparkles, Check, ChevronRight } from 'lucide-react';
 import HaldiramHeader from '../../components/HaldiramHeader';
 import HaldiramFooter from '../../components/HaldiramFooter';
 import FloatingWidgets from '../../components/FloatingWidgets';
@@ -105,18 +105,8 @@ function MenuContent() {
                 placeholder="Search this menu..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 pr-8 py-2 rounded-full bg-[#FAF7F2] border border-[#E5DFD7] text-xs text-[#1F2937] outline-none focus:border-[#C4161C] w-48 sm:w-60"
+                className="pl-9 pr-3 py-2 rounded-full bg-[#FAF7F2] border border-[#E5DFD7] text-xs text-[#1F2937] outline-none focus:border-[#C4161C] w-48 sm:w-60"
               />
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#9CA3AF] hover:text-[#1F2937] transition-colors"
-                  aria-label="Clear Search"
-                >
-                  <X size={14} />
-                </button>
-              )}
             </div>
 
             {/* Sort Select */}
