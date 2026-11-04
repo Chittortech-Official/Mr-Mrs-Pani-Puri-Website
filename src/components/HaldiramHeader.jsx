@@ -113,37 +113,30 @@ export default function HaldiramHeader() {
             <div className="hidden md:flex items-center gap-4 text-xs text-[#7A230B] shrink-0">
               <span className="flex items-center gap-1">
                 <Clock size={12} className="text-[#C4161C]" />
-                <span>Daily: 6 AM – 12 PM & 4 PM – 11 PM</span>
+                <span>Daily: 6:00 AM – 12:00 PM & 4:00 PM – 11:00 PM</span>
               </span>
-              <a
-                href={`tel:${restaurantInfo.primaryPhone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-1 hover:text-[#C4161C] font-semibold"
-              >
-                <Phone size={12} className="text-[#C4161C]" />
-                <span>Helpline: {restaurantInfo.primaryPhone}</span>
-              </a>
             </div>
           </div>
         </div>
 
         {/* 2. Main Middle Bar: Hamburger, Logo, Search Bar, Quick Contact & WhatsApp */}
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
           
           {/* Left: Hamburger Button + Logo + Title */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink min-w-0">
             {/* Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold"
+              className="p-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold shrink-0"
               aria-label="Open Navigation Menu"
             >
-              <Menu size={19} />
+              <Menu size={18} />
               <span className="hidden sm:inline">Menu</span>
             </button>
 
             {/* Brand Logo & Name */}
-            <Link href="/" className="flex items-center gap-2 sm:gap-2.5">
-              <div className="relative w-8 h-8 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-[#C4161C] shadow-sm bg-white shrink-0">
+            <Link href="/" className="flex items-center gap-1.5 sm:gap-2.5 min-w-0">
+              <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-[#C4161C] shadow-sm bg-white shrink-0">
                 <Image
                   src="/logo.jpg"
                   alt="Mr Mrs Logo"
@@ -152,16 +145,16 @@ export default function HaldiramHeader() {
                   priority
                 />
               </div>
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-base sm:text-xl font-black tracking-tight text-[#C4161C] font-serif leading-none">
+              <div className="min-w-0">
+                <div className="flex items-center gap-1">
+                  <span className="text-sm sm:text-xl font-black tracking-tight text-[#C4161C] font-serif leading-none whitespace-nowrap">
                     Mr Mrs
                   </span>
-                  <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#C4161C] text-white font-bold uppercase tracking-wider">
+                  <span className="text-[8px] sm:text-[9px] px-1 py-0.2 rounded bg-[#C4161C] text-white font-bold uppercase tracking-wider shrink-0">
                     EST. 2026
                   </span>
                 </div>
-                <p className="text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-[#730B10] leading-tight">
+                <p className="hidden xs:block text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-[#730B10] leading-tight truncate">
                   Panipuriwala & Chathouse
                 </p>
               </div>
@@ -265,38 +258,15 @@ export default function HaldiramHeader() {
           </div>
 
           {/* Right Action Buttons */}
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-2 shrink-0">
             {/* Catering shortcut (Desktop) */}
             <Link
               href="/catering"
-              className="hidden lg:inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-[#D97706] text-[#B45309] hover:bg-[#FFFBEB] text-xs font-bold uppercase tracking-wider transition-all"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#D97706] text-[#B45309] hover:bg-[#FFFBEB] text-xs font-bold uppercase tracking-wider transition-all"
             >
               <Gift size={13} />
               <span>Bulk Orders</span>
             </Link>
-
-            {/* Quick Call Icon (Mobile) */}
-            <a
-              href={`tel:${restaurantInfo.primaryPhone.replace(/\s+/g, '')}`}
-              className="md:hidden w-8 h-8 rounded-full bg-[#FFF1E8] border border-[#FDD5C2] text-[#C4161C] flex items-center justify-center"
-              aria-label="Call Store"
-            >
-              <Phone size={14} />
-            </a>
-
-            {/* WhatsApp Order Button */}
-            <a
-              href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
-                "Hello Mr Mrs Panipuriwala! I would like to order."
-              )}`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold shadow-sm transition-colors"
-            >
-              <MessageCircle size={15} />
-              <span className="hidden sm:inline">WhatsApp Order</span>
-              <span className="sm:hidden text-[11px]">Order</span>
-            </a>
           </div>
 
         </div>
