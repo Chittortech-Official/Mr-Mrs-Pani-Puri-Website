@@ -98,47 +98,29 @@ export default function HaldiramHeader() {
     <>
       <header className="w-full bg-white shadow-sm sticky top-0 z-40">
         
-        {/* Main Header Bar: Hamburger, Logo, Search Bar, Bulk Orders */}
-        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
+        {/* Main Header Bar: Logo (Left), Desktop Search (Center), Hamburger (Right Corner) */}
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-3 sm:gap-4">
           
-          {/* Left: Hamburger Button + Logo + Title */}
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink min-w-0">
-            {/* Hamburger Button */}
-            <button
-              onClick={() => setMobileMenuOpen(true)}
-              className="p-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold shrink-0"
-              aria-label="Open Navigation Menu"
-            >
-              <Menu size={18} />
-              <span className="hidden sm:inline">Menu</span>
-            </button>
-
-            {/* Brand Logo & Name */}
-            <Link href="/" className="flex items-center gap-1.5 sm:gap-2.5 min-w-0">
-              <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-[#C4161C] shadow-sm bg-white shrink-0">
-                <Image
-                  src="/logo.jpg"
-                  alt="Mr Mrs Logo"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="min-w-0">
-                <div className="flex items-center gap-1">
-                  <span className="text-sm sm:text-xl font-black tracking-tight text-[#C4161C] font-serif leading-none whitespace-nowrap">
-                    Mr Mrs
-                  </span>
-                  <span className="text-[8px] sm:text-[9px] px-1 py-0.2 rounded bg-[#C4161C] text-white font-bold uppercase tracking-wider shrink-0">
-                    EST. 2026
-                  </span>
-                </div>
-                <p className="hidden xs:block text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-[#730B10] leading-tight truncate">
-                  Panipuriwala & Chathouse
-                </p>
-              </div>
-            </Link>
-          </div>
+          {/* Left: Brand Logo & Name */}
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-[#C4161C] shadow-sm bg-white shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt="Mr Mrs Logo"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div>
+              <span className="text-base sm:text-xl font-black tracking-tight text-[#C4161C] font-serif leading-none block">
+                Mr Mrs
+              </span>
+              <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#730B10] leading-tight mt-0.5">
+                Panipuriwala & Chathouse
+              </p>
+            </div>
+          </Link>
 
           {/* Central Search Bar with Live Suggestions (Desktop / Laptop only) */}
           <div ref={searchRef} className="flex-1 max-w-md mx-3 hidden md:block relative">
@@ -236,8 +218,8 @@ export default function HaldiramHeader() {
             )}
           </div>
 
-          {/* Right Action Buttons */}
-          <div className="flex items-center gap-2 shrink-0">
+          {/* Right Corner: Bulk Orders (Desktop) + Hamburger Menu Button */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {/* Catering shortcut (Desktop) */}
             <Link
               href="/catering"
@@ -246,6 +228,16 @@ export default function HaldiramHeader() {
               <Gift size={13} />
               <span>Bulk Orders</span>
             </Link>
+
+            {/* Hamburger Button (Right Corner) */}
+            <button
+              onClick={() => setMobileMenuOpen(true)}
+              className="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold shrink-0"
+              aria-label="Open Navigation Menu"
+            >
+              <Menu size={19} />
+              <span className="hidden sm:inline">Menu</span>
+            </button>
           </div>
 
         </div>
@@ -274,12 +266,7 @@ export default function HaldiramHeader() {
                     <Image src="/logo.jpg" alt="Logo" fill className="object-cover" />
                   </div>
                   <div>
-                    <div className="flex items-center gap-1.5">
-                      <h3 className="font-serif text-base font-bold text-[#C4161C]">Mr Mrs</h3>
-                      <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#C4161C] text-white font-bold uppercase tracking-wider">
-                        EST. 2026
-                      </span>
-                    </div>
+                    <h3 className="font-serif text-base font-bold text-[#C4161C]">Mr Mrs</h3>
                     <p className="text-[10px] text-[#730B10] uppercase font-semibold">Panipuriwala & Chathouse</p>
                   </div>
                 </div>
