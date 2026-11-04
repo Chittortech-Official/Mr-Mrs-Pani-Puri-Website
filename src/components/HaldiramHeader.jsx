@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Search, Phone, MessageCircle, Clock, MapPin, Menu, X, Sparkles, Gift, ChevronRight } from 'lucide-react';
+import { Search, MessageCircle, MapPin, Menu, X, Sparkles, Gift, ChevronRight } from 'lucide-react';
 import { restaurantInfo, allMenuItems } from '../data/restaurantData';
 
 export default function HaldiramHeader() {
@@ -98,28 +98,7 @@ export default function HaldiramHeader() {
     <>
       <header className="w-full bg-white shadow-sm sticky top-0 z-40">
         
-        {/* 1. Haldiram Style Festive Top Announcement Bar (Mobile Optimized) */}
-        <div className="bg-[#FFF1E8] border-b border-[#FDD5C2] text-[#9A2F12] text-[11px] sm:text-xs py-1 px-3 sm:px-4">
-          <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 font-medium">
-            <div className="flex items-center gap-1.5 truncate">
-              <span className="inline-block px-1.5 py-0.2 text-[9px] sm:text-[10px] bg-[#C4161C] text-white rounded font-bold uppercase tracking-wider shrink-0">
-                100% Pure Veg
-              </span>
-              <span className="truncate">
-                ✨ Authentic Chaats & Café in Begun • RO Purified Water
-              </span>
-            </div>
-
-            <div className="hidden md:flex items-center gap-4 text-xs text-[#7A230B] shrink-0">
-              <span className="flex items-center gap-1">
-                <Clock size={12} className="text-[#C4161C]" />
-                <span>Daily: 6:00 AM – 12:00 PM & 4:00 PM – 11:00 PM</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* 2. Main Middle Bar: Hamburger, Logo, Search Bar, Quick Contact & WhatsApp */}
+        {/* Main Header Bar: Hamburger, Logo, Search Bar, Bulk Orders */}
         <div className="max-w-7xl mx-auto px-2.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
           
           {/* Left: Hamburger Button + Logo + Title */}
