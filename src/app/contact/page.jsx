@@ -19,7 +19,7 @@ export default function ContactPage() {
   };
 
   const mapDirectionUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    "Fawwara Chowk Pratap Nagar Begun Chittorgarh Rajasthan 312001"
+    "Fawwara Chowk Pratap Nagar Chittorgarh Rajasthan 312001"
   )}`;
 
   return (
@@ -42,11 +42,11 @@ export default function ContactPage() {
             Visit Our Store
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2937] mb-3">
-            Find Us at Fawwara Chowk, Begun
+            Find Us at Fawwara Chowk, Chittorgarh
           </h1>
           <div className="w-16 h-1 bg-[#C4161C] mx-auto mb-4" />
           <p className="text-xs sm:text-sm text-[#6B7280] max-w-lg mx-auto">
-            Located in the center of Begun, Chittorgarh. Come enjoy hot kachoris in the morning or refreshing chaat and frappes in the evening.
+            Located in the center of Chittorgarh. Come enjoy hot kachoris in the morning or refreshing chaat and frappes in the evening.
           </p>
         </div>
       </section>
@@ -179,7 +179,7 @@ export default function ContactPage() {
 
               <div className="absolute top-4 left-4 p-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-md border border-[#E5DFD7] max-w-xs hidden sm:block">
                 <p className="text-xs font-bold text-[#1F2937]">Mr Mrs Panipuriwala & Chathouse</p>
-                <p className="text-[10px] text-[#6B7280]">Fawwara Chowk, Begun, Chittorgarh</p>
+                <p className="text-[10px] text-[#6B7280]">Fawwara Chowk, Chittorgarh</p>
               </div>
             </div>
 

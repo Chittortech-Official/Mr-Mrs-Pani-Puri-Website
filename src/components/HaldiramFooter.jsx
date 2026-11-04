@@ -77,7 +77,7 @@ export default function HaldiramFooter() {
             </div>
           </div>
           <p className="text-xs text-[#B5ABA1] leading-relaxed">
-            Chittorgarh’s beloved pure veg street food, artisan chaats, and café brand. Serving crispy puris with cooling hing-pudina waters, stone-baked pizzas, and royal thick shakes at Fawwara Chowk, Begun.
+            Chittorgarh’s beloved pure veg street food, artisan chaats, and café brand. Serving crispy puris with cooling hing-pudina waters, stone-baked pizzas, and royal thick shakes at Fawwara Chowk, Chittorgarh.
           </p>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#15803D]/20 border border-[#15803D]/40 text-[#4ade80] text-xs font-semibold">
             <span className="w-2 h-2 rounded-full bg-[#22c55e]" />

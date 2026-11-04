@@ -280,26 +280,6 @@ export default function HaldiramHeader() {
                 </button>
               </div>
 
-              {/* Search Inside Drawer */}
-              <div className="p-4 pb-2">
-                <form onSubmit={handleSearchSubmit} className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search Pani Puri, Kachori, Shakes..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-4 pr-10 py-2.5 rounded-full bg-[#FAF7F2] border border-[#E5DFD7] text-xs text-[#1F2937] outline-none focus:border-[#C4161C]"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#C4161C] text-white flex items-center justify-center"
-                    aria-label="Search"
-                  >
-                    <Search size={14} />
-                  </button>
-                </form>
-              </div>
-
               {/* Navigation Links List */}
               <div className="px-4 py-2 divide-y divide-[#F3EDE2]">
                 {categories.map((cat) => (
@@ -331,7 +311,7 @@ export default function HaldiramHeader() {
               </a>
 
               <div className="text-[11px] text-[#6B7280] space-y-1 text-center">
-                <p className="font-semibold text-[#1F2937]">📍 Fawwara Chowk, Begun, Chittorgarh</p>
+                <p className="font-semibold text-[#1F2937]">📍 Fawwara Chowk, Chittorgarh</p>
                 <p>⏰ 6:00 AM – 12:00 PM & 4:00 PM – 11:00 PM</p>
                 <p>📞 Helpline: {restaurantInfo.primaryPhone}</p>
               </div>

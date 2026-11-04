@@ -9,8 +9,8 @@ export const restaurantInfo = {
   established: "2026",
   isPureVeg: true,
   description:
-    "Begun & Chittorgarh's premier destination for authentic street food, artisan chaats, and contemporary café delights. Crispy puris crafted with pure RO mineral waters, slow-simmered chutneys, artisan coffees, and thick shakes.",
-  address: "Fawwara Chowk, Pratap Nagar, 7B, Begun, Chittorgarh, Rajasthan - 312001, India",
+    "Chittorgarh's premier destination for authentic street food, artisan chaats, and contemporary café delights. Crispy puris crafted with pure RO mineral waters, slow-simmered chutneys, artisan coffees, and thick shakes.",
+  address: "Fawwara Chowk, Pratap Nagar, 7B, Chittorgarh, Rajasthan - 312001, India",
   landmark: "Near Diet Rd & Domino's Pizza Nagar",
   primaryPhone: "+91 91191 69333",
   secondaryPhone: "+91 95878 98150",
@@ -26,7 +26,7 @@ export const restaurantInfo = {
   highlights: [
     { label: "100% Pure Veg", value: "Strict Pure Vegetarian Kitchen" },
     { label: "Hygiene Standard", value: "RO Purified Mineral Water" },
-    { label: "Established", value: "Est. 2026 at Begun" },
+    { label: "Established", value: "Est. 2026 at Chittorgarh" },
     { label: "Guest Rating", value: "4.9 ★ (380+ Verified Reviews)" },
   ],
 };
@@ -147,7 +147,7 @@ export const heroPromos = [
     title: "Authentic Crispy Pani Puri & Mewari Chaats",
     subtitle: "PREPARED DAILY WITH 100% PURE RO MINERAL WATER",
     highlight: "✨ RAJASTHAN'S FAVORITE • 100% PURE VEG",
-    description: "Begun's most celebrated street food destination. Savor crispy puris with 5 signature waters, rich Dahi Tokri Chaats & royal treats crafted fresh daily at Fawwara Chowk.",
+    description: "Chittorgarh's most celebrated street food destination. Savor crispy puris with 5 signature waters, rich Dahi Tokri Chaats & royal treats crafted fresh daily at Fawwara Chowk.",
     ctaText: "Explore Full Menu",
     ctaLink: "/menu",
     badge: "5 Authentic Waters",
@@ -181,7 +181,7 @@ export const heroPromos = [
   },
   {
     title: "Live Chaat Stalls for Weddings & Grand Events",
-    subtitle: "OUTDOOR CATERING ACROSS CHITTORGARH & BEGUN",
+    subtitle: "OUTDOOR CATERING ACROSS CHITTORGARH",
     highlight: "👑 ROYAL LIVE COUNTERS • UNIFORMED CHEFS",
     description: "Elevate your weddings, birthdays & corporate parties with our live Gol Gappe counters (5 waters), royal Dahi Papdi Chaat stations, and mocktail bars.",
     ctaText: "Book Event Catering",
@@ -1307,7 +1307,7 @@ export const cateringPackages = [
     includes: [
       "Fresh morning breakfast boxes: Pyaaz kachori, samosa, jalebi & indori poha",
       "Sealed hygienic leak-proof packaging",
-      "Direct delivery to corporate offices, banquet halls & event grounds in Begun/Chittorgarh",
+      "Direct delivery to corporate offices, banquet halls & event grounds in Chittorgarh",
       "Customized company branding tags available",
     ],
     badge: "Corporate Choice",
@@ -1320,7 +1320,7 @@ export const reviewsData = [
     rating: 5,
     date: "October 2026",
     comment:
-      "Hands down the best chaat in Begun and Chittorgarh! The Pani Puri water is so refreshing and authentic. The place is super clean, pure veg, and their cold coffees are as good as any luxury cafe.",
+      "Hands down the best chaat in Chittorgarh! The Pani Puri water is so refreshing and authentic. The place is super clean, pure veg, and their cold coffees are as good as any luxury cafe.",
     dish: "Masala Puri & Biscoff Frappe",
   },
   {

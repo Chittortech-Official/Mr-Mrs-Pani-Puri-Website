@@ -56,7 +56,7 @@ export default function CateringPage() {
           </h1>
           <div className="w-20 h-1 bg-[#FCD34D] mx-auto mb-5" />
           <p className="text-sm sm:text-base text-white/90 max-w-2xl mx-auto font-light leading-relaxed">
-            Planning a grand wedding, ring ceremony, birthday party, or corporate event in Begun, Chittorgarh, or nearby areas? Delight your guests with live, hygienic chaat stalls operated by uniformed chefs.
+            Planning a grand wedding, ring ceremony, birthday party, or corporate event in Chittorgarh or nearby areas? Delight your guests with live, hygienic chaat stalls operated by uniformed chefs.
           </p>
         </div>
       </section>

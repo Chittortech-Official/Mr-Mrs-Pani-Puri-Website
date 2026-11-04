@@ -38,7 +38,7 @@ export default function Home() {
 
       {/* 1. Haldiram Style Hero Promotional Carousel (Compact, Clean & Arrow-Free) */}
       <section className="relative w-full overflow-hidden bg-[#7F1D1D]">
-        <div className="relative min-h-[260px] sm:min-h-[380px] md:min-h-[460px] flex items-center">
+        <div className="relative min-h-[285px] sm:min-h-[380px] md:min-h-[460px] flex items-center">
           {heroPromos.map((promo, idx) => (
             <div
               key={promo.title}
@@ -49,7 +49,7 @@ export default function Home() {
               {/* Subtle Festive Pattern Overlay */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDE047_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
-              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8 md:py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-center">
+              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-9 sm:py-8 md:py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-center">
 
                 {/* Left Column: Festive Haldiram Typography */}
                 <div className="lg:col-span-7 flex flex-col items-start text-white text-left">
@@ -96,7 +96,7 @@ export default function Home() {
                   </div>
 
                   {/* Trust Badges Bar inside Hero */}
-                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[9px] sm:text-xs text-white/90 border-t border-white/20 pt-2">
+                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[9px] sm:text-xs text-white/90 border-t border-white/20 pt-2 mb-2 sm:mb-0">
                     <span className="flex items-center gap-1">
                       <span className="text-[#4ade80]">✓</span> RO Water
                     </span>
@@ -104,7 +104,7 @@ export default function Home() {
                       <span className="text-[#4ade80]">✓</span> 100% Pure Veg
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="text-[#FDE047]">★</span> 4.9 Rating in Begun
+                      <span className="text-[#FDE047]">★</span> 4.9 Rating in Chittorgarh
                     </span>
                   </div>
 
@@ -130,7 +130,7 @@ export default function Home() {
                         {promo.dishName || promo.title}
                       </h4>
                       <p className="text-[11px] text-[#78350F] font-semibold mt-0.5">
-                        Fawwara Chowk, Begun • Made Fresh Daily
+                        Fawwara Chowk, Chittorgarh • Made Fresh Daily
                       </p>
                     </div>
                   </div>
@@ -140,14 +140,14 @@ export default function Home() {
             </div>
           ))}
 
-          {/* Dots Indicator (No arrows as requested) */}
-          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5">
+          {/* Dots Indicator (Positioned with clear margin below content) */}
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/25 backdrop-blur-xs">
             {heroPromos.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === currentSlide ? 'w-6 bg-[#FDE047]' : 'w-1.5 bg-white/50'
+                  i === currentSlide ? 'w-6 bg-[#FDE047]' : 'w-1.5 bg-white/60'
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />
@@ -436,7 +436,7 @@ export default function Home() {
                 Live Chaat Counters & Outdoor Catering
               </h2>
               <p className="text-xs sm:text-sm text-white/90 max-w-2xl font-light leading-relaxed">
-                Hosting an event in Begun, Chittorgarh or nearby regions? Treat your guests to the royal magic of live Gol Gappe stations with 5 flavored waters, Dahi Tokri Chaats & artisan coffee counters.
+                Hosting an event in Chittorgarh or nearby regions? Treat your guests to the royal magic of live Gol Gappe stations with 5 flavored waters, Dahi Tokri Chaats & artisan coffee counters.
               </p>
               <p className="text-xs text-[#FDE047] font-semibold">
                 Direct Contact with Founder Rajendra Tripathi: +91 95878 98150 / +91 91191 69333

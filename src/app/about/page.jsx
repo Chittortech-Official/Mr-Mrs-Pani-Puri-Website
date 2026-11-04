@@ -27,7 +27,7 @@ export default function AboutPage() {
       <section className="bg-[#FAF7F2] py-14 border-b border-[#ECE7DE]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <span className="inline-block px-3 py-1 rounded-full bg-[#C4161C]/10 text-[#C4161C] text-xs font-bold uppercase tracking-wider mb-3">
-            Est. 2026 • Begun, Chittorgarh
+            Est. 2026 • Chittorgarh
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F2937] leading-tight mb-4">
             The Legend of Mr Mrs Panipuriwala & Chathouse
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 <h4 className="font-serif text-xl font-bold text-white">
                   Mr Mrs Panipuriwala
                 </h4>
-                <p className="text-xs text-white/80">Fawwara Chowk, Begun • Est. 2026</p>
+                <p className="text-xs text-white/80">Fawwara Chowk, Chittorgarh • Est. 2026</p>
               </div>
             </div>
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-sm sm:text-base text-[#4B5563] leading-relaxed">
-              Under the visionary leadership of <strong>Rajendra Tripathi</strong>, Mr Mrs Panipuriwala & Chathouse changed that forever in Begun. We introduced a 100% pure vegetarian kitchen where every single drop of pani puri water is filtered through advanced multi-stage RO purification, puris are crisp and fresh, and chutneys are slow-simmered with genuine tamarind, dates, and garden mint.
+              Under the visionary leadership of <strong>Rajendra Tripathi</strong>, Mr Mrs Panipuriwala & Chathouse changed that forever in Chittorgarh. We introduced a 100% pure vegetarian kitchen where every single drop of pani puri water is filtered through advanced multi-stage RO purification, puris are crisp and fresh, and chutneys are slow-simmered with genuine tamarind, dates, and garden mint.
             </p>
 
             <p className="text-sm sm:text-base text-[#4B5563] leading-relaxed">

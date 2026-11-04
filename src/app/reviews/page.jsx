@@ -34,7 +34,7 @@ export default function ReviewsPage() {
             4.9 Out of 5.0 Rating
           </span>
           <p className="text-xs sm:text-sm text-[#6B7280] mt-1">
-            Based on 380+ Verified Customer Ratings in Begun & Chittorgarh
+            Based on 380+ Verified Customer Ratings in Chittorgarh
           </p>
         </div>
       </section>
