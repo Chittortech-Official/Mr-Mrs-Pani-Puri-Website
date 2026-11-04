@@ -91,7 +91,6 @@ export default function HaldiramFooter() {
           <ul className="space-y-2 text-xs text-[#B5ABA1]">
             <li><Link href="/" className="hover:text-white transition-colors">Home Storefront</Link></li>
             <li><Link href="/menu" className="hover:text-white transition-colors">Complete Food Menu</Link></li>
-            <li><Link href="/digital-menu" className="hover:text-white transition-colors">Original Scanned Menu</Link></li>
             <li><Link href="/catering" className="hover:text-white transition-colors">Live Event Catering</Link></li>
             <li><Link href="/about" className="hover:text-white transition-colors">Our Story & Heritage</Link></li>
             <li><Link href="/reviews" className="hover:text-white transition-colors">Customer Reviews</Link></li>
@@ -150,3 +149,4 @@ export default function HaldiramFooter() {
     </footer>
   );
 }
+

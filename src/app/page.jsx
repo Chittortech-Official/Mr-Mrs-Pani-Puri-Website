@@ -448,33 +448,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Original Scanned Menu Book Teaser Strip */}
-      <section className="py-12 bg-[#FAF7F2] border-b border-[#ECE7DE]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="relative w-16 h-20 rounded-xl overflow-hidden shadow-md border-2 border-white shrink-0">
-              <Image src="/114054.jpg" alt="Menu Book" fill className="object-cover" />
-            </div>
-            <div>
-              <h3 className="font-serif text-lg sm:text-xl font-bold text-[#1F2937]">
-                Want to See the Original Printed Menu?
-              </h3>
-              <p className="text-xs text-[#6B7280]">
-                Browse all 8 high-resolution scanned pages of our spiral-bound physical menu book.
-              </p>
-            </div>
-          </div>
-
-          <Link
-            href="/digital-menu"
-            className="px-6 py-3 rounded-full bg-[#1F1916] hover:bg-[#C4161C] text-white text-xs font-bold uppercase tracking-wider transition-colors shrink-0"
-          >
-            Open Menu Book →
-          </Link>
-        </div>
-      </section>
-
-      {/* 7. Reviews Strip */}
+      {/* 6. Reviews Strip */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8">

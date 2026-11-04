@@ -2,104 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-gold: #B99470;
-  --color-gold-dark: #9E7B58;
-  --color-plum: #883563;
-  --color-dark: #141110;
-  --color-ivory: #FDFBF7;
-}
-
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden !important;
-  max-width: 100% !important;
-  width: 100% !important;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
-  background-color: #FDFBF7;
-  color: #2C2725;
+  background-color: #FFFDFB;
+  color: #1F2937;
   font-family: var(--font-poppins), sans-serif;
-  overflow-x: hidden !important;
-  max-width: 100% !important;
-  width: 100% !important;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Sandstone Scrollbar */
+/* Clean, lightweight scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #141110;
+  background: #F3EDE2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B99470;
-  border-radius: 4px;
+  background: #C4161C;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9E7B58;
-}
-
-/* Subtle Royal Jali Background pattern */
-.bg-jali-pattern {
-  background-image: radial-gradient(#B99470 0.75px, transparent 0.75px), radial-gradient(#B99470 0.75px, #FDFBF7 0.75px);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
-}
-
-.bg-jali-dark {
-  background-image: radial-gradient(rgba(185, 148, 112, 0.25) 0.75px, transparent 0.75px), radial-gradient(rgba(185, 148, 112, 0.25) 0.75px, #141110 0.75px);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
-}
-
-/* Ultra-smooth Ken Burns effect */
-@keyframes kenburns-slow {
-  0% {
-    transform: scale(1.02) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: scale(1.10) translate3d(-1%, -0.8%, 0);
-  }
-  100% {
-    transform: scale(1.05) translate3d(1%, 0.6%, 0);
-  }
-}
-
-.animate-kenburns {
-  animation: kenburns-slow 22s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
-  will-change: transform;
-}
-
-/* 3D Depth & Smooth Scroll Reveal */
-.reveal-element {
-  opacity: 0;
-  transform: translate3d(0, 25px, 0);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-element.reveal-active {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-.reveal-delay-1 { transition-delay: 100ms; }
-.reveal-delay-2 { transition-delay: 200ms; }
-.reveal-delay-3 { transition-delay: 300ms; }
-.reveal-delay-4 { transition-delay: 400ms; }
-
-/* Parallax Container */
-[data-parallax-speed] {
-  will-change: transform;
-  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+  background: #9B1117;
 }
 
 /* Custom text selection */
 ::selection {
-  background: #B99470;
+  background: #C4161C;
   color: #FFFFFF;
 }
-

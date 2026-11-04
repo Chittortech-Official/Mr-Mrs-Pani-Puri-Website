@@ -183,15 +183,15 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Verification Proof Badge from User Uploaded Screenshot */}
+            {/* Store Verification Card */}
             <div className="bg-[#FAF7F2] rounded-2xl p-4 border border-[#ECE7DE] flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-[#C4161C]/30 shrink-0">
-                  <Image src="/114057.jpg" alt="WhatsApp Business Verification" fill className="object-cover" />
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#C4161C] shrink-0 bg-white shadow-sm">
+                  <Image src="/logo.jpg" alt="Mr Mrs Official Mascot" fill className="object-cover" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#1F2937]">Verified WhatsApp Business Account</p>
-                  <p className="text-[11px] text-[#6B7280]">Registered as Restaurant • Hotel • Event Planner</p>
+                  <p className="text-xs font-bold text-[#1F2937]">Mr Mrs Panipuriwala & Chathouse</p>
+                  <p className="text-[11px] text-[#15803D] font-semibold">✓ Verified Registered Food Outlet & Event Planner</p>
                 </div>
               </div>
               <a
@@ -213,3 +213,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

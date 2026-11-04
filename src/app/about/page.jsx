@@ -43,12 +43,12 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Visual Card with Menu Cover & Mascot */}
+          {/* Left Column: Visual Card with Golden Pani Puri & Mascot */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white aspect-[3/4]">
               <Image
-                src="/114054.jpg"
-                alt="Mr Mrs Panipuriwala Original Menu Cover"
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                alt="Authentic Gol Gappe & Chaat"
                 fill
                 className="object-cover"
                 priority
@@ -56,7 +56,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <span className="text-[10px] uppercase tracking-widest text-[#FCD34D] font-bold block mb-1">
-                  Original Menu Edition
+                  Taste of Tradition
                 </span>
                 <h4 className="font-serif text-xl font-bold text-white">
                   Mr Mrs Panipuriwala
@@ -162,3 +162,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

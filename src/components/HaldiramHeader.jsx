@@ -31,7 +31,6 @@ export default function HaldiramHeader() {
     { name: 'Gourmet Shakes', href: '/menu?cat=shakes' },
     { name: 'Pizzas & Burgers', href: '/menu?cat=burgers' },
     { name: 'Momos & Chinese', href: '/menu?cat=chinese' },
-    { name: 'Original Menu Book', href: '/digital-menu' },
     { name: 'Bulk Orders & Catering', href: '/catering' },
     { name: 'Our Story', href: '/about' },
     { name: 'Store Location', href: '/contact' },
@@ -210,3 +209,4 @@ export default function HaldiramHeader() {
     </header>
   );
 }
+
