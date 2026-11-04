@@ -196,23 +196,35 @@ function MenuContent() {
                       </div>
 
                       {/* Info */}
-                      <div className="p-4">
-                        <span className="text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold block mb-1">
-                          {item.categoryName}
-                        </span>
+                      <div className="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-center justify-between gap-2 mb-1.5">
+                            <span className="text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold">
+                              {item.categoryName}
+                            </span>
+                            <span className="text-[10px] font-semibold px-2 py-0.5 rounded border border-[#E5DFD7] text-[#6B7280] bg-[#FAF7F2]">
+                              Fresh Daily
+                            </span>
+                          </div>
 
-                        <h3 className="font-bold text-sm sm:text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1 line-clamp-1">
-                          {item.name}
-                        </h3>
+                          <h3 className="font-serif font-bold text-sm sm:text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1 line-clamp-1">
+                            {item.name}
+                          </h3>
 
-                        <p className="text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-3 font-light">
-                          {item.desc}
-                        </p>
+                          <p className="text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-3 font-light">
+                            {item.desc}
+                          </p>
+                        </div>
 
-                        <div className="flex items-baseline gap-1">
-                          <span className="text-xs text-[#6B7280]">Price:</span>
-                          <span className="font-serif text-lg font-black text-[#C4161C]">
-                            ₹{item.price}/-
+                        <div className="pt-2 border-t border-[#F3EDE2] flex items-center justify-between mb-3">
+                          <div>
+                            <span className="text-[10px] text-[#9CA3AF] block font-medium">Daily Price</span>
+                            <span className="font-serif text-lg font-black text-[#C4161C]">
+                              ₹{item.price}/-
+                            </span>
+                          </div>
+                          <span className="text-[11px] text-[#15803D] font-bold bg-[#DCFCE7] px-2 py-0.5 rounded">
+                            100% Veg
                           </span>
                         </div>
                       </div>

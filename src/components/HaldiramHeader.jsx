@@ -163,15 +163,15 @@ export default function HaldiramHeader() {
 
         </div>
 
-        {/* 3. Horizontal Category Ribbon (Matches Haldiram's top shop categories) */}
-        <div className="bg-[#FAF7F2] border-t border-b border-[#ECE7DE] hidden lg:block">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between text-xs font-semibold text-[#4A403A] overflow-x-auto no-scrollbar">
+        {/* 3. Horizontal Category Ribbon (Matches Haldiram's top shop categories on both Desktop & Mobile) */}
+        <div className="bg-[#FAF7F2] border-t border-b border-[#ECE7DE]">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-start lg:justify-between gap-1 text-xs font-semibold text-[#4A403A] overflow-x-auto no-scrollbar">
             {categories.map((cat, idx) => (
               <Link
                 key={cat.name}
                 href={cat.href}
-                className={`py-2.5 px-3 hover:text-[#C4161C] hover:bg-white transition-colors whitespace-nowrap ${
-                  idx === 0 ? 'text-[#C4161C] font-bold' : ''
+                className={`py-2 sm:py-2.5 px-2.5 sm:px-3 hover:text-[#C4161C] hover:bg-white transition-colors whitespace-nowrap shrink-0 ${
+                  idx === 0 ? 'text-[#C4161C] font-bold border-b-2 border-[#C4161C]' : ''
                 }`}
               >
                 {cat.name}

@@ -36,78 +36,106 @@ export default function Home() {
       {/* Header */}
       <HaldiramHeader />
 
-      {/* 1. Haldiram Style Hero Promotional Carousel */}
-      <section className="relative w-full overflow-hidden bg-[#1F1916]">
-        <div className="relative min-h-[380px] sm:min-h-[460px] md:min-h-[500px] flex items-center">
+      {/* 1. Haldiram Style Hero Promotional Carousel (Festive, Bright & Appetizing) */}
+      <section className="relative w-full overflow-hidden bg-[#7F1D1D]">
+        <div className="relative min-h-[460px] sm:min-h-[500px] md:min-h-[520px] flex items-center">
           {heroPromos.map((promo, idx) => (
             <div
               key={promo.title}
-              className={`absolute inset-0 transition-opacity duration-1000 flex items-center ${
+              className={`absolute inset-0 transition-opacity duration-700 flex items-center bg-gradient-to-r ${promo.bgGradient} ${
                 idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
               }`}
             >
-              {/* Background with Dark Warm Gradient and Culinary Image */}
-              <div className="absolute inset-0">
-                <Image
-                  src={promo.image}
-                  alt={promo.title}
-                  fill
-                  priority={idx === 0}
-                  className="object-cover brightness-[0.32]"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-r ${promo.bgGradient} opacity-90 mix-blend-multiply`} />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
-              </div>
+              {/* Subtle Festive Pattern Overlay */}
+              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDE047_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
-              {/* Slide Content */}
-              <div className="relative z-20 max-w-7xl mx-auto px-6 sm:px-10 py-12 flex flex-col items-start max-w-2xl text-white">
-                <span className="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[#FEF08A] text-xs font-bold uppercase tracking-wider mb-3 border border-white/20">
-                  {promo.highlight}
-                </span>
+              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                {/* Left Column: Festive Haldiram Typography */}
+                <div className="lg:col-span-7 flex flex-col items-start text-white text-left">
+                  
+                  {/* Top Haldiram Badge */}
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-[#FEF08A] text-xs font-bold uppercase tracking-wider mb-4 border border-[#FDE047]/40">
+                    <span className="w-2 h-2 rounded-full bg-[#4ade80] inline-block" />
+                    <span>{promo.highlight}</span>
+                  </div>
 
-                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-2">
-                  {promo.title}
-                </h1>
+                  <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-2 drop-shadow-sm">
+                    {promo.title}
+                  </h1>
 
-                <p className="text-xs sm:text-sm font-semibold tracking-widest text-[#FCD34D] uppercase mb-4">
-                  {promo.subtitle}
-                </p>
+                  <p className="text-xs sm:text-sm font-bold tracking-widest text-[#FDE047] uppercase mb-4">
+                    {promo.subtitle}
+                  </p>
 
-                <p className="text-sm sm:text-base text-white/90 leading-relaxed mb-6 font-light">
-                  {promo.description}
-                </p>
+                  <p className="text-sm sm:text-base text-white/95 leading-relaxed mb-6 font-light max-w-xl">
+                    {promo.description}
+                  </p>
 
-                <div className="flex flex-wrap items-center gap-3">
-                  <Link
-                    href={promo.ctaLink}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C4161C] hover:bg-[#A51217] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md transition-colors"
-                  >
-                    <span>{promo.ctaText}</span>
-                    <ArrowRight size={16} />
-                  </Link>
+                  {/* Actions */}
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <Link
+                      href={promo.ctaLink}
+                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#991B1B] hover:bg-[#FFF1E8] text-xs sm:text-sm font-black uppercase tracking-wider shadow-xl transition-all"
+                    >
+                      <span>{promo.ctaText}</span>
+                      <ArrowRight size={16} />
+                    </Link>
 
-                  <a
-                    href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
-                      "Hello Mr Mrs Panipuriwala! I would like to order from your menu."
-                    )}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md transition-colors"
-                  >
-                    <MessageCircle size={16} />
-                    <span>Quick WhatsApp Order</span>
-                  </a>
+                    <a
+                      href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
+                        `Hello Mr Mrs Panipuriwala! I would like to order: ${promo.dishName || 'from menu'}.`
+                      )}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-black uppercase tracking-wider shadow-xl transition-all"
+                    >
+                      <MessageCircle size={17} />
+                      <span>Order on WhatsApp</span>
+                    </a>
+                  </div>
+
+                  {/* Trust Badges Bar inside Hero */}
+                  <div className="flex flex-wrap items-center gap-4 text-[11px] sm:text-xs text-white/90 border-t border-white/20 pt-4">
+                    <span className="flex items-center gap-1.5">
+                      <span className="text-[#4ade80]">✓</span> 100% Pure RO Purified Water
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="text-[#4ade80]">✓</span> Strictly Pure Vegetarian
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="text-[#FDE047]">★</span> 4.9 Rating in Begun
+                    </span>
+                  </div>
+
                 </div>
-              </div>
 
-              {/* Right Side Stamp / Medallion (Desktop) */}
-              <div className="hidden lg:flex absolute right-12 top-1/2 -translate-y-1/2 z-20 flex-col items-center">
-                <div className="w-48 h-48 rounded-full border-4 border-[#FCD34D] p-1 shadow-2xl bg-white overflow-hidden relative">
-                  <Image src="/logo.jpg" alt="Logo" fill className="object-cover" />
+                {/* Right Column: Haldiram Arch Food Showcase Card */}
+                <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
+                  <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-4 border-[#FDE047]/70 shadow-2xl bg-white p-2">
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                      <Image
+                        src={promo.image}
+                        alt={promo.dishName || promo.title}
+                        fill
+                        priority={idx === 0}
+                        className="object-cover"
+                      />
+                      <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-[11px] font-bold text-[#991B1B] shadow">
+                        {promo.badge}
+                      </div>
+                    </div>
+                    <div className="p-3 text-center bg-gradient-to-b from-[#FFFDF9] to-[#FAF5EE]">
+                      <h4 className="font-serif font-bold text-base text-[#1F2937]">
+                        {promo.dishName || promo.title}
+                      </h4>
+                      <p className="text-[11px] text-[#78350F] font-semibold mt-0.5">
+                        Fawwara Chowk, Begun • Made Fresh Daily
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <span className="mt-3 text-xs uppercase tracking-widest text-white/90 font-bold bg-black/60 px-3 py-1 rounded-full">
-                  100% Pure Veg • Begun
-                </span>
+
               </div>
             </div>
           ))}
@@ -115,15 +143,15 @@ export default function Home() {
           {/* Slider Controls */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 z-30 p-2.5 rounded-full bg-black/40 hover:bg-[#C4161C] text-white transition-colors"
-            aria-label="Previous"
+            className="absolute left-3 sm:left-5 z-30 p-2 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
+            aria-label="Previous Slide"
           >
             <ChevronLeft size={22} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 z-30 p-2.5 rounded-full bg-black/40 hover:bg-[#C4161C] text-white transition-colors"
-            aria-label="Next"
+            className="absolute right-3 sm:right-5 z-30 p-2 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
+            aria-label="Next Slide"
           >
             <ChevronRight size={22} />
           </button>
@@ -135,7 +163,7 @@ export default function Home() {
                 key={i}
                 onClick={() => setCurrentSlide(i)}
                 className={`h-2 rounded-full transition-all ${
-                  i === currentSlide ? 'w-8 bg-[#FCD34D]' : 'w-2 bg-white/40'
+                  i === currentSlide ? 'w-8 bg-[#FDE047]' : 'w-2 bg-white/50'
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />
@@ -244,23 +272,35 @@ export default function Home() {
                   </div>
 
                   {/* Product Details */}
-                  <div className="p-4 sm:p-5">
-                    <span className="text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold block mb-1">
-                      {item.categoryName}
-                    </span>
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-1.5">
+                        <span className="text-[10px] uppercase tracking-wider text-[#9CA3AF] font-bold">
+                          {item.categoryName}
+                        </span>
+                        <span className="text-[10px] font-semibold px-2 py-0.5 rounded border border-[#E5DFD7] text-[#6B7280] bg-[#FAF7F2]">
+                          Fresh Daily
+                        </span>
+                      </div>
 
-                    <h4 className="font-bold text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1.5 line-clamp-1">
-                      {item.name}
-                    </h4>
+                      <h4 className="font-serif font-bold text-base text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-snug mb-1.5 line-clamp-1">
+                        {item.name}
+                      </h4>
 
-                    <p className="text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-3">
-                      {item.desc}
-                    </p>
+                      <p className="text-xs text-[#6B7280] line-clamp-2 leading-relaxed mb-3">
+                        {item.desc}
+                      </p>
+                    </div>
 
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-xs font-semibold text-[#6B7280]">Price:</span>
-                      <span className="font-serif text-lg font-black text-[#C4161C]">
-                        ₹{item.price}/-
+                    <div className="pt-2 border-t border-[#F3EDE2] flex items-center justify-between mb-3">
+                      <div>
+                        <span className="text-[10px] text-[#9CA3AF] block font-medium">Daily Price</span>
+                        <span className="font-serif text-lg font-black text-[#C4161C]">
+                          ₹{item.price}/-
+                        </span>
+                      </div>
+                      <span className="text-[11px] text-[#15803D] font-bold bg-[#DCFCE7] px-2 py-0.5 rounded">
+                        100% Veg
                       </span>
                     </div>
                   </div>
