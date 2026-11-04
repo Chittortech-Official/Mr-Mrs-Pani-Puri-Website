@@ -36,47 +36,59 @@ export default function Home() {
       {/* Header */}
       <HaldiramHeader />
 
-      {/* 1. Haldiram Style Hero Promotional Carousel (Compact, Clean & Arrow-Free) */}
-      <section className="relative w-full overflow-hidden bg-[#7F1D1D]">
-        <div className="relative min-h-[285px] sm:min-h-[380px] md:min-h-[460px] flex items-center">
+      {/* 1. Haldiram Style Hero Promotional Carousel (Live Food Photography Banners) */}
+      <section className="relative w-full overflow-hidden bg-[#120505]">
+        <div className="relative min-h-[310px] sm:min-h-[400px] md:min-h-[470px] flex items-center">
           {heroPromos.map((promo, idx) => (
             <div
               key={promo.title}
-              className={`absolute inset-0 transition-opacity duration-700 flex items-center bg-gradient-to-r ${promo.bgGradient} ${
+              className={`absolute inset-0 transition-opacity duration-700 flex items-center ${
                 idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
               }`}
             >
-              {/* Subtle Festive Pattern Overlay */}
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDE047_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
+              {/* Full-bleed Live Food Photography Background across Mobile & Desktop */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src={promo.image}
+                  alt={promo.dishName || promo.title}
+                  fill
+                  priority={idx === 0}
+                  className="object-cover object-center scale-105 transition-transform duration-1000 ease-out"
+                />
+                {/* Cinematic Dark Vignette: deep culinary contrast keeping food deliciously visible & text 100% crisp */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/75 to-black/35" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-black/30" />
+                <div className="absolute inset-0 bg-amber-950/20 mix-blend-multiply" />
+              </div>
 
-              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-9 sm:py-8 md:py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-center">
+              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-11 sm:py-8 md:py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-center">
 
                 {/* Left Column: Festive Haldiram Typography */}
                 <div className="lg:col-span-7 flex flex-col items-start text-white text-left">
 
                   {/* Top Haldiram Badge */}
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/15 backdrop-blur-md text-[#FEF08A] text-[9px] sm:text-xs font-bold uppercase tracking-wider mb-2 border border-[#FDE047]/40">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] inline-block" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/20 backdrop-blur-md text-[#FEF08A] text-[9px] sm:text-xs font-bold uppercase tracking-wider mb-2 border border-[#FDE047]/40 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] inline-block animate-pulse" />
                     <span>{promo.highlight}</span>
                   </div>
 
-                  <h1 className="font-serif text-lg sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-1.5 drop-shadow-sm">
+                  <h1 className="font-serif text-xl sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-1.5 drop-shadow-md">
                     {promo.title}
                   </h1>
 
-                  <p className="text-[10px] sm:text-xs md:text-sm font-bold tracking-widest text-[#FDE047] uppercase mb-2 sm:mb-3">
+                  <p className="text-[10px] sm:text-xs md:text-sm font-bold tracking-widest text-[#FDE047] uppercase mb-2 sm:mb-3 drop-shadow">
                     {promo.subtitle}
                   </p>
 
-                  <p className="hidden sm:block text-xs sm:text-sm md:text-base text-white/95 leading-relaxed mb-4 font-light max-w-xl">
+                  <p className="hidden sm:block text-xs sm:text-sm md:text-base text-white/95 leading-relaxed mb-4 font-light max-w-xl drop-shadow">
                     {promo.description}
                   </p>
 
                   {/* Actions */}
-                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2.5 sm:mb-4">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <Link
                       href={promo.ctaLink}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-white text-[#991B1B] hover:bg-[#FFF1E8] text-[11px] sm:text-xs font-black uppercase tracking-wider shadow-md transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-white text-[#991B1B] hover:bg-[#FFF1E8] text-[11px] sm:text-xs font-black uppercase tracking-wider shadow-lg transition-transform hover:scale-105"
                     >
                       <span>{promo.ctaText}</span>
                       <ArrowRight size={13} />
@@ -88,7 +100,7 @@ export default function Home() {
                       )}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-[11px] sm:text-xs font-black uppercase tracking-wider shadow-md transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-[11px] sm:text-xs font-black uppercase tracking-wider shadow-lg transition-transform hover:scale-105"
                     >
                       <MessageCircle size={14} />
                       <span>Order on WhatsApp</span>
@@ -97,13 +109,13 @@ export default function Home() {
 
                   {/* Trust Badges Bar inside Hero */}
                   <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[9px] sm:text-xs text-white/90 border-t border-white/20 pt-2 mb-2 sm:mb-0">
-                    <span className="flex items-center gap-1">
-                      <span className="text-[#4ade80]">✓</span> RO Water
+                    <span className="flex items-center gap-1 font-medium">
+                      <span className="text-[#4ade80] font-bold">✓</span> RO Water
                     </span>
-                    <span className="flex items-center gap-1">
-                      <span className="text-[#4ade80]">✓</span> 100% Pure Veg
+                    <span className="flex items-center gap-1 font-medium">
+                      <span className="text-[#4ade80] font-bold">✓</span> 100% Pure Veg
                     </span>
-                    <span className="flex items-center gap-1">
+                    <span className="flex items-center gap-1 font-medium">
                       <span className="text-[#FDE047]">★</span> 4.9 Rating in Chittorgarh
                     </span>
                   </div>
@@ -112,7 +124,7 @@ export default function Home() {
 
                 {/* Right Column: Haldiram Arch Food Showcase Card (Tablet & Desktop) */}
                 <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
-                  <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-4 border-[#FDE047]/70 shadow-2xl bg-white p-2">
+                  <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-4 border-[#FDE047]/80 shadow-2xl bg-black/40 backdrop-blur-md p-2">
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                       <Image
                         src={promo.image}
@@ -121,11 +133,11 @@ export default function Home() {
                         priority={idx === 0}
                         className="object-cover"
                       />
-                      <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-[11px] font-bold text-[#991B1B] shadow">
+                      <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-[11px] font-bold text-[#991B1B] shadow">
                         {promo.badge}
                       </div>
                     </div>
-                    <div className="p-3 text-center bg-gradient-to-b from-[#FFFDF9] to-[#FAF5EE]">
+                    <div className="p-3 text-center bg-white/95 backdrop-blur-sm rounded-b-2xl">
                       <h4 className="font-serif font-bold text-base text-[#1F2937]">
                         {promo.dishName || promo.title}
                       </h4>
@@ -140,14 +152,14 @@ export default function Home() {
             </div>
           ))}
 
-          {/* Dots Indicator (Positioned with clear margin below content) */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/25 backdrop-blur-xs">
+          {/* Dots Indicator (Positioned with clear margin below content - NO overlap) */}
+          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 shadow-lg">
             {heroPromos.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === currentSlide ? 'w-6 bg-[#FDE047]' : 'w-1.5 bg-white/60'
+                  i === currentSlide ? 'w-6 bg-[#FDE047]' : 'w-1.5 bg-white/50 hover:bg-white'
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />

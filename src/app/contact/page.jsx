@@ -167,7 +167,7 @@ export default function ContactPage() {
             <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-[#ECE7DE] shadow-xl relative bg-[#E8DFD3]">
               <iframe
                 title="Mr Mrs Panipuriwala Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14516.32684824707!2d75.0210214!3d24.9863484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3968b556f890cf25%3A0xb30491a67ad84b72!2sBegun%2C%20Rajasthan%20312023!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115894.6186358327!2d74.56847285141065!3d24.88789965007788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3968a065bb4d7207%3A0xb2c2f6050b1c0b3a!2sChittorgarh%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
