@@ -10,9 +10,9 @@ export default function HaldiramFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#1F1916] text-[#E5DFD7] pt-8 sm:pt-14 pb-8 border-t-4 border-[#C4161C]">
+    <footer className="w-full bg-[#1F1916] text-[#E5DFD7] pt-6 sm:pt-10 pb-4 border-t-4 border-[#C4161C]">
       {/* 4 Trust Badges Strip (Haldiram Style) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12 border-b border-[#382E28]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-6 sm:pb-8 border-b border-[#382E28]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center sm:text-left">
           
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 p-2 rounded-xl bg-white/5 sm:bg-transparent">
@@ -59,7 +59,7 @@ export default function HaldiramFooter() {
       </div>
 
       {/* Main Footer Links */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-4 sm:py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-8">
         
         {/* Brand Column */}
         <div className="lg:col-span-4 space-y-4">
@@ -138,7 +138,7 @@ export default function HaldiramFooter() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-16 sm:pb-6 border-t border-[#382E28] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8C827A]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-4 border-t border-[#382E28] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#8C827A]">
         <p>© {currentYear} {restaurantInfo.name}. All rights reserved.</p>
         <p className="flex items-center gap-1.5 flex-wrap justify-center">
           <span>Crafted with</span>
