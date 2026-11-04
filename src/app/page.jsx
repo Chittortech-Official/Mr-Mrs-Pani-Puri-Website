@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  ChevronLeft, ChevronRight, Sparkles, MessageCircle, ShieldCheck,
+  Sparkles, MessageCircle, ShieldCheck,
   Clock, ArrowRight, Utensils, Star, Gift, CheckCircle2, Heart
 } from 'lucide-react';
 import HaldiramHeader from '../components/HaldiramHeader';
@@ -36,9 +36,9 @@ export default function Home() {
       {/* Header */}
       <HaldiramHeader />
 
-      {/* 1. Haldiram Style Hero Promotional Carousel (Festive, Bright & Mobile-First) */}
+      {/* 1. Haldiram Style Hero Promotional Carousel (Compact, Clean & Arrow-Free) */}
       <section className="relative w-full overflow-hidden bg-[#7F1D1D]">
-        <div className="relative min-h-[380px] sm:min-h-[460px] md:min-h-[500px] flex items-center">
+        <div className="relative min-h-[260px] sm:min-h-[380px] md:min-h-[460px] flex items-center">
           {heroPromos.map((promo, idx) => (
             <div
               key={promo.title}
@@ -49,18 +49,18 @@ export default function Home() {
               {/* Subtle Festive Pattern Overlay */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDE047_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
-              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8 md:py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-center">
 
                 {/* Left Column: Festive Haldiram Typography */}
                 <div className="lg:col-span-7 flex flex-col items-start text-white text-left">
 
                   {/* Top Haldiram Badge */}
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/15 backdrop-blur-md text-[#FEF08A] text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3 border border-[#FDE047]/40">
-                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#4ade80] inline-block" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/15 backdrop-blur-md text-[#FEF08A] text-[9px] sm:text-xs font-bold uppercase tracking-wider mb-2 border border-[#FDE047]/40">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] inline-block" />
                     <span>{promo.highlight}</span>
                   </div>
 
-                  <h1 className="font-serif text-xl sm:text-3xl md:text-5xl font-black text-white leading-tight mb-1.5 sm:mb-2 drop-shadow-sm">
+                  <h1 className="font-serif text-lg sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-1.5 drop-shadow-sm">
                     {promo.title}
                   </h1>
 
@@ -68,18 +68,18 @@ export default function Home() {
                     {promo.subtitle}
                   </p>
 
-                  <p className="text-xs sm:text-sm md:text-base text-white/95 leading-relaxed mb-4 sm:mb-6 font-light max-w-xl line-clamp-2 sm:line-clamp-none">
+                  <p className="hidden sm:block text-xs sm:text-sm md:text-base text-white/95 leading-relaxed mb-4 font-light max-w-xl">
                     {promo.description}
                   </p>
 
                   {/* Actions */}
-                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2.5 sm:mb-4">
                     <Link
                       href={promo.ctaLink}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white text-[#991B1B] hover:bg-[#FFF1E8] text-xs sm:text-sm font-black uppercase tracking-wider shadow-lg transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-white text-[#991B1B] hover:bg-[#FFF1E8] text-[11px] sm:text-xs font-black uppercase tracking-wider shadow-md transition-colors"
                     >
                       <span>{promo.ctaText}</span>
-                      <ArrowRight size={14} />
+                      <ArrowRight size={13} />
                     </Link>
 
                     <a
@@ -88,15 +88,15 @@ export default function Home() {
                       )}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-black uppercase tracking-wider shadow-lg transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-[11px] sm:text-xs font-black uppercase tracking-wider shadow-md transition-colors"
                     >
-                      <MessageCircle size={15} />
+                      <MessageCircle size={14} />
                       <span>Order on WhatsApp</span>
                     </a>
                   </div>
 
                   {/* Trust Badges Bar inside Hero */}
-                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-white/90 border-t border-white/20 pt-2.5 sm:pt-3">
+                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[9px] sm:text-xs text-white/90 border-t border-white/20 pt-2">
                     <span className="flex items-center gap-1">
                       <span className="text-[#4ade80]">✓</span> RO Water
                     </span>
@@ -140,30 +140,14 @@ export default function Home() {
             </div>
           ))}
 
-          {/* Slider Controls */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 sm:left-4 z-30 p-1.5 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft size={18} />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 sm:right-4 z-30 p-1.5 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
-            aria-label="Next Slide"
-          >
-            <ChevronRight size={18} />
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 sm:gap-2">
+          {/* Dots Indicator (No arrows as requested) */}
+          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5">
             {heroPromos.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
-                className={`h-1.5 sm:h-2 rounded-full transition-all ${
-                  i === currentSlide ? 'w-6 sm:w-8 bg-[#FDE047]' : 'w-1.5 sm:w-2 bg-white/50'
+                className={`h-1.5 rounded-full transition-all ${
+                  i === currentSlide ? 'w-6 bg-[#FDE047]' : 'w-1.5 bg-white/50'
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />

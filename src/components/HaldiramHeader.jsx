@@ -194,14 +194,14 @@ export default function HaldiramHeader() {
           </form>
         </div>
 
-        {/* 3. Horizontal Category Ribbon */}
-        <div className="bg-[#FAF7F2] border-b border-[#ECE7DE]">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 flex items-center gap-1 text-xs font-semibold text-[#4A403A] overflow-x-auto no-scrollbar py-1 sm:py-1.5">
+        {/* 3. Horizontal Category Ribbon (Desktop only - Mobile uses clean Hamburger Menu) */}
+        <div className="bg-[#FAF7F2] border-b border-[#ECE7DE] hidden md:block">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-1 text-xs font-semibold text-[#4A403A] py-2">
             {categories.map((cat, idx) => (
               <Link
                 key={cat.name}
                 href={cat.href}
-                className={`py-1 px-2.5 sm:px-3 hover:text-[#C4161C] hover:bg-white rounded-md transition-colors whitespace-nowrap shrink-0 text-[11px] sm:text-xs ${
+                className={`py-1 px-3 hover:text-[#C4161C] hover:bg-white rounded-md transition-colors whitespace-nowrap text-xs ${
                   idx === 0 ? 'text-[#C4161C] font-bold bg-white shadow-xs' : ''
                 }`}
               >
