@@ -140,10 +140,18 @@ export default function HaldiramFooter() {
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 border-t border-[#382E28] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8C827A]">
         <p>© {currentYear} {restaurantInfo.name}. All rights reserved.</p>
-        <p className="flex items-center gap-1.5">
-          <span>World-Class Taste of Rajasthan</span>
-          <span>•</span>
-          <span className="text-[#C4161C] font-semibold">Begun, Chittorgarh</span>
+        <p className="flex items-center gap-1.5 flex-wrap justify-center">
+          <span>Crafted with</span>
+          <span className="text-red-500">❤️</span>
+          <span>by Chittor&apos;s Best IT Company</span>
+          <a
+            href="https://chittortech.in"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white hover:text-[#C4161C] font-bold underline transition-colors"
+          >
+            ChittorTech
+          </a>
         </p>
       </div>
     </footer>
