@@ -10,48 +10,48 @@ export default function HaldiramFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#1F1916] text-[#E5DFD7] pt-14 pb-8 border-t-4 border-[#C4161C]">
+    <footer className="w-full bg-[#1F1916] text-[#E5DFD7] pt-8 sm:pt-14 pb-8 border-t-4 border-[#C4161C]">
       {/* 4 Trust Badges Strip (Haldiram Style) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-12 border-b border-[#382E28]">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center sm:text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12 border-b border-[#382E28]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center sm:text-left">
           
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#15803D]/20 border border-[#15803D]/40 text-[#4ade80] flex items-center justify-center shrink-0">
-              <ShieldCheck size={24} />
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 p-2 rounded-xl bg-white/5 sm:bg-transparent">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#15803D]/20 border border-[#15803D]/40 text-[#4ade80] flex items-center justify-center shrink-0">
+              <ShieldCheck size={20} />
             </div>
             <div>
-              <h5 className="font-bold text-sm text-white">100% Pure Veg</h5>
-              <p className="text-xs text-[#A89F95]">Strict vegetarian preparation</p>
+              <h5 className="font-bold text-xs sm:text-sm text-white">100% Pure Veg</h5>
+              <p className="text-[10px] sm:text-xs text-[#A89F95]">Strict vegetarian prep</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#C4161C]/20 border border-[#C4161C]/40 text-[#F87171] flex items-center justify-center shrink-0">
-              <Award size={24} />
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 p-2 rounded-xl bg-white/5 sm:bg-transparent">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#C4161C]/20 border border-[#C4161C]/40 text-[#F87171] flex items-center justify-center shrink-0">
+              <Award size={20} />
             </div>
             <div>
-              <h5 className="font-bold text-sm text-white">RO Mineral Water</h5>
-              <p className="text-xs text-[#A89F95]">Pani puri & cooking with RO</p>
+              <h5 className="font-bold text-xs sm:text-sm text-white">RO Mineral Water</h5>
+              <p className="text-[10px] sm:text-xs text-[#A89F95]">100% RO puri water</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#D97706]/20 border border-[#D97706]/40 text-[#FBBF24] flex items-center justify-center shrink-0">
-              <Clock size={24} />
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 p-2 rounded-xl bg-white/5 sm:bg-transparent">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#D97706]/20 border border-[#D97706]/40 text-[#FBBF24] flex items-center justify-center shrink-0">
+              <Clock size={20} />
             </div>
             <div>
-              <h5 className="font-bold text-sm text-white">Made Fresh Daily</h5>
-              <p className="text-xs text-[#A89F95]">6 AM to 11 PM live service</p>
+              <h5 className="font-bold text-xs sm:text-sm text-white">Made Fresh Daily</h5>
+              <p className="text-[10px] sm:text-xs text-[#A89F95]">6 AM to 11 PM live</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 text-[#4ade80] flex items-center justify-center shrink-0">
-              <MessageCircle size={24} />
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 p-2 rounded-xl bg-white/5 sm:bg-transparent">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 text-[#4ade80] flex items-center justify-center shrink-0">
+              <MessageCircle size={20} />
             </div>
             <div>
-              <h5 className="font-bold text-sm text-white">WhatsApp Orders</h5>
-              <p className="text-xs text-[#A89F95]">Direct takeaway & catering</p>
+              <h5 className="font-bold text-xs sm:text-sm text-white">WhatsApp Orders</h5>
+              <p className="text-[10px] sm:text-xs text-[#A89F95]">1-Click takeaway</p>
             </div>
           </div>
 
@@ -59,7 +59,7 @@ export default function HaldiramFooter() {
       </div>
 
       {/* Main Footer Links */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10">
         
         {/* Brand Column */}
         <div className="lg:col-span-4 space-y-4">
@@ -138,7 +138,7 @@ export default function HaldiramFooter() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 border-t border-[#382E28] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8C827A]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-16 sm:pb-6 border-t border-[#382E28] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8C827A]">
         <p>© {currentYear} {restaurantInfo.name}. All rights reserved.</p>
         <p className="flex items-center gap-1.5 flex-wrap justify-center">
           <span>Crafted with</span>

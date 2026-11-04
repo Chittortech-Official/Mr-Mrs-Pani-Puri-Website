@@ -53,20 +53,22 @@ export default function HaldiramHeader() {
     <>
       <header className="w-full bg-white shadow-sm sticky top-0 z-40">
         
-        {/* 1. Haldiram Style Festive Top Announcement Bar */}
-        <div className="bg-[#FFF1E8] border-b border-[#FDD5C2] text-[#9A2F12] text-xs py-1.5 px-4">
-          <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2 font-medium">
-            <div className="flex items-center gap-2">
-              <span className="inline-block px-1.5 py-0.5 text-[10px] bg-[#C4161C] text-white rounded font-bold uppercase tracking-wider">
+        {/* 1. Haldiram Style Festive Top Announcement Bar (Mobile Optimized) */}
+        <div className="bg-[#FFF1E8] border-b border-[#FDD5C2] text-[#9A2F12] text-[11px] sm:text-xs py-1 px-3 sm:px-4">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 font-medium">
+            <div className="flex items-center gap-1.5 truncate">
+              <span className="inline-block px-1.5 py-0.2 text-[9px] sm:text-[10px] bg-[#C4161C] text-white rounded font-bold uppercase tracking-wider shrink-0">
                 100% Pure Veg
               </span>
-              <span>✨ Authentic Street Food, Chaats & Café in Begun, Chittorgarh • Prepared with RO Purified Water</span>
+              <span className="truncate">
+                ✨ Authentic Chaats & Café in Begun • RO Purified Water
+              </span>
             </div>
 
-            <div className="hidden md:flex items-center gap-5 text-xs text-[#7A230B]">
+            <div className="hidden md:flex items-center gap-4 text-xs text-[#7A230B] shrink-0">
               <span className="flex items-center gap-1">
                 <Clock size={12} className="text-[#C4161C]" />
-                <span>Daily: 6:00 AM – 12:00 PM & 4:00 PM – 11:00 PM</span>
+                <span>Daily: 6 AM – 12 PM & 4 PM – 11 PM</span>
               </span>
               <a
                 href={`tel:${restaurantInfo.primaryPhone.replace(/\s+/g, '')}`}
@@ -79,100 +81,128 @@ export default function HaldiramHeader() {
           </div>
         </div>
 
-        {/* 2. Main Middle Bar: Logo, Search Bar, Quick Contact & WhatsApp */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+        {/* 2. Main Middle Bar: Hamburger, Logo, Search Bar, Quick Contact & WhatsApp */}
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
           
-          {/* Haldiram Style Red Oval Emblem Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0 group">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#C4161C] shadow-md bg-white group-hover:scale-105 transition-transform">
-              <Image
-                src="/logo.jpg"
-                alt="Mr Mrs Panipuriwala Logo"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-xl sm:text-2xl font-black tracking-tight text-[#C4161C] font-serif">
-                  Mr Mrs
-                </span>
-                <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#C4161C]/10 text-[#C4161C] font-bold uppercase">
-                  Est. 2023
-                </span>
-              </div>
-              <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#730B10]">
-                Panipuriwala & Chathouse
-              </p>
-            </div>
-          </Link>
+          {/* Left: Hamburger Button + Logo + Title */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Hamburger Button */}
+            <button
+              onClick={() => setMobileMenuOpen(true)}
+              className="p-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold"
+              aria-label="Open Navigation Menu"
+            >
+              <Menu size={19} />
+              <span className="hidden sm:inline">Menu</span>
+            </button>
 
-          {/* Central Search Bar (Matches Haldiram's layout) */}
-          <div className="flex-1 max-w-xl mx-2 hidden lg:block">
+            {/* Brand Logo & Name */}
+            <Link href="/" className="flex items-center gap-2 sm:gap-2.5">
+              <div className="relative w-8 h-8 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-[#C4161C] shadow-sm bg-white shrink-0">
+                <Image
+                  src="/logo.jpg"
+                  alt="Mr Mrs Logo"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div>
+                <div className="flex items-center gap-1">
+                  <span className="text-base sm:text-xl font-black tracking-tight text-[#C4161C] font-serif leading-none">
+                    Mr Mrs
+                  </span>
+                  <span className="hidden xs:inline text-[9px] px-1 py-0.2 rounded bg-[#C4161C]/10 text-[#C4161C] font-bold uppercase">
+                    Begun
+                  </span>
+                </div>
+                <p className="text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-[#730B10] leading-tight">
+                  Panipuriwala & Chathouse
+                </p>
+              </div>
+            </Link>
+          </div>
+
+          {/* Central Search Bar (Desktop) */}
+          <div className="flex-1 max-w-md mx-2 hidden md:block">
             <form onSubmit={handleSearchSubmit} className="relative">
               <input
                 type="text"
-                placeholder="Search For Anything (Pani Puri, Kachori, Biscoff Frappe, Pizza...)"
+                placeholder="Search Pani Puri, Kachori, Biscoff, Pizza..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-4 pr-11 py-2.5 rounded-full bg-[#FAF7F2] border border-[#E5E0D8] focus:border-[#C4161C] focus:bg-white text-xs sm:text-sm text-[#1F2937] placeholder-[#8C827A] outline-none transition-all shadow-inner"
+                className="w-full pl-4 pr-10 py-2 rounded-full bg-[#FAF7F2] border border-[#E5E0D8] focus:border-[#C4161C] focus:bg-white text-xs text-[#1F2937] placeholder-[#8C827A] outline-none transition-all shadow-inner"
               />
               <button
                 type="submit"
-                className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#C4161C] text-white flex items-center justify-center hover:bg-[#9B1117] transition-colors"
+                className="absolute right-1 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#C4161C] text-white flex items-center justify-center hover:bg-[#9B1117] transition-colors"
                 aria-label="Search"
               >
-                <Search size={15} />
+                <Search size={13} />
               </button>
             </form>
           </div>
 
           {/* Right Action Buttons */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            {/* Catering shortcut (Desktop) */}
             <Link
               href="/catering"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-[#D97706] text-[#B45309] hover:bg-[#FFFBEB] text-xs font-bold uppercase tracking-wider transition-all"
+              className="hidden lg:inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-[#D97706] text-[#B45309] hover:bg-[#FFFBEB] text-xs font-bold uppercase tracking-wider transition-all"
             >
-              <Gift size={15} />
-              <span>Bulk / Catering</span>
+              <Gift size={13} />
+              <span>Bulk Orders</span>
             </Link>
 
+            {/* Quick Call Icon (Mobile) */}
+            <a
+              href={`tel:${restaurantInfo.primaryPhone.replace(/\s+/g, '')}`}
+              className="md:hidden w-8 h-8 rounded-full bg-[#FFF1E8] border border-[#FDD5C2] text-[#C4161C] flex items-center justify-center"
+              aria-label="Call Store"
+            >
+              <Phone size={14} />
+            </a>
+
+            {/* WhatsApp Order Button */}
             <a
               href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
                 "Hello Mr Mrs Panipuriwala! I would like to order."
               )}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold shadow-md hover:scale-105 transition-all"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold shadow-sm transition-colors"
             >
-              <MessageCircle size={16} />
-              <span className="hidden xs:inline">WhatsApp Order</span>
-              <span className="xs:hidden">Order</span>
+              <MessageCircle size={15} />
+              <span className="hidden sm:inline">WhatsApp Order</span>
+              <span className="sm:hidden text-[11px]">Order</span>
             </a>
-
-            {/* Universal Hamburger Menu Button (Visible on Both Desktop & Mobile) */}
-            <button
-              onClick={() => setMobileMenuOpen(true)}
-              className="flex items-center gap-1.5 p-2 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors text-xs font-bold shadow-sm"
-              aria-label="Open Navigation Menu"
-            >
-              <Menu size={20} />
-              <span className="hidden sm:inline">Menu</span>
-            </button>
           </div>
 
         </div>
 
-        {/* 3. Horizontal Category Ribbon (Matches Haldiram's top shop categories on both Desktop & Mobile) */}
-        <div className="bg-[#FAF7F2] border-t border-b border-[#ECE7DE]">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-start lg:justify-between gap-1 text-xs font-semibold text-[#4A403A] overflow-x-auto no-scrollbar">
+        {/* Mobile Full-Width Search Input (Visible on mobile screens) */}
+        <div className="md:hidden px-3 pb-2 pt-0.5 bg-white border-b border-[#F0EAE1]">
+          <form onSubmit={handleSearchSubmit} className="relative">
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" />
+            <input
+              type="text"
+              placeholder="Search Pani Puri, Kachori, Frappes..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-9 pr-4 py-1.5 rounded-full bg-[#FAF7F2] border border-[#E5DFD7] text-xs text-[#1F2937] placeholder-[#9CA3AF] outline-none focus:border-[#C4161C]"
+            />
+          </form>
+        </div>
+
+        {/* 3. Horizontal Category Ribbon */}
+        <div className="bg-[#FAF7F2] border-b border-[#ECE7DE]">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 flex items-center gap-1 text-xs font-semibold text-[#4A403A] overflow-x-auto no-scrollbar py-1 sm:py-1.5">
             {categories.map((cat, idx) => (
               <Link
                 key={cat.name}
                 href={cat.href}
-                className={`py-2 sm:py-2.5 px-2.5 sm:px-3 hover:text-[#C4161C] hover:bg-white transition-colors whitespace-nowrap shrink-0 ${
-                  idx === 0 ? 'text-[#C4161C] font-bold border-b-2 border-[#C4161C]' : ''
+                className={`py-1 px-2.5 sm:px-3 hover:text-[#C4161C] hover:bg-white rounded-md transition-colors whitespace-nowrap shrink-0 text-[11px] sm:text-xs ${
+                  idx === 0 ? 'text-[#C4161C] font-bold bg-white shadow-xs' : ''
                 }`}
               >
                 {cat.name}

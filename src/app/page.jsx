@@ -36,49 +36,50 @@ export default function Home() {
       {/* Header */}
       <HaldiramHeader />
 
-      {/* 1. Haldiram Style Hero Promotional Carousel (Festive, Bright & Appetizing) */}
+      {/* 1. Haldiram Style Hero Promotional Carousel (Festive, Bright & Mobile-First) */}
       <section className="relative w-full overflow-hidden bg-[#7F1D1D]">
-        <div className="relative min-h-[460px] sm:min-h-[500px] md:min-h-[520px] flex items-center">
+        <div className="relative min-h-[380px] sm:min-h-[460px] md:min-h-[500px] flex items-center">
           {heroPromos.map((promo, idx) => (
             <div
               key={promo.title}
-              className={`absolute inset-0 transition-opacity duration-700 flex items-center bg-gradient-to-r ${promo.bgGradient} ${idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                }`}
+              className={`absolute inset-0 transition-opacity duration-700 flex items-center bg-gradient-to-r ${promo.bgGradient} ${
+                idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+              }`}
             >
               {/* Subtle Festive Pattern Overlay */}
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDE047_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDE047_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
-              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
 
                 {/* Left Column: Festive Haldiram Typography */}
                 <div className="lg:col-span-7 flex flex-col items-start text-white text-left">
 
                   {/* Top Haldiram Badge */}
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-[#FEF08A] text-xs font-bold uppercase tracking-wider mb-4 border border-[#FDE047]/40">
-                    <span className="w-2 h-2 rounded-full bg-[#4ade80] inline-block" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/15 backdrop-blur-md text-[#FEF08A] text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3 border border-[#FDE047]/40">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#4ade80] inline-block" />
                     <span>{promo.highlight}</span>
                   </div>
 
-                  <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-2 drop-shadow-sm">
+                  <h1 className="font-serif text-xl sm:text-3xl md:text-5xl font-black text-white leading-tight mb-1.5 sm:mb-2 drop-shadow-sm">
                     {promo.title}
                   </h1>
 
-                  <p className="text-xs sm:text-sm font-bold tracking-widest text-[#FDE047] uppercase mb-4">
+                  <p className="text-[10px] sm:text-xs md:text-sm font-bold tracking-widest text-[#FDE047] uppercase mb-2 sm:mb-3">
                     {promo.subtitle}
                   </p>
 
-                  <p className="text-sm sm:text-base text-white/95 leading-relaxed mb-6 font-light max-w-xl">
+                  <p className="text-xs sm:text-sm md:text-base text-white/95 leading-relaxed mb-4 sm:mb-6 font-light max-w-xl line-clamp-2 sm:line-clamp-none">
                     {promo.description}
                   </p>
 
                   {/* Actions */}
-                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
                     <Link
                       href={promo.ctaLink}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#991B1B] hover:bg-[#FFF1E8] text-xs sm:text-sm font-black uppercase tracking-wider shadow-xl transition-all"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white text-[#991B1B] hover:bg-[#FFF1E8] text-xs sm:text-sm font-black uppercase tracking-wider shadow-lg transition-colors"
                     >
                       <span>{promo.ctaText}</span>
-                      <ArrowRight size={16} />
+                      <ArrowRight size={14} />
                     </Link>
 
                     <a
@@ -87,29 +88,29 @@ export default function Home() {
                       )}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-black uppercase tracking-wider shadow-xl transition-all"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-black uppercase tracking-wider shadow-lg transition-colors"
                     >
-                      <MessageCircle size={17} />
+                      <MessageCircle size={15} />
                       <span>Order on WhatsApp</span>
                     </a>
                   </div>
 
                   {/* Trust Badges Bar inside Hero */}
-                  <div className="flex flex-wrap items-center gap-4 text-[11px] sm:text-xs text-white/90 border-t border-white/20 pt-4">
-                    <span className="flex items-center gap-1.5">
-                      <span className="text-[#4ade80]">✓</span> 100% Pure RO Purified Water
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-white/90 border-t border-white/20 pt-2.5 sm:pt-3">
+                    <span className="flex items-center gap-1">
+                      <span className="text-[#4ade80]">✓</span> RO Water
                     </span>
-                    <span className="flex items-center gap-1.5">
-                      <span className="text-[#4ade80]">✓</span> Strictly Pure Vegetarian
+                    <span className="flex items-center gap-1">
+                      <span className="text-[#4ade80]">✓</span> 100% Pure Veg
                     </span>
-                    <span className="flex items-center gap-1.5">
+                    <span className="flex items-center gap-1">
                       <span className="text-[#FDE047]">★</span> 4.9 Rating in Begun
                     </span>
                   </div>
 
                 </div>
 
-                {/* Right Column: Haldiram Arch Food Showcase Card */}
+                {/* Right Column: Haldiram Arch Food Showcase Card (Tablet & Desktop) */}
                 <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
                   <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-4 border-[#FDE047]/70 shadow-2xl bg-white p-2">
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -142,27 +143,28 @@ export default function Home() {
           {/* Slider Controls */}
           <button
             onClick={prevSlide}
-            className="absolute left-3 sm:left-5 z-30 p-2 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
+            className="absolute left-2 sm:left-4 z-30 p-1.5 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
             aria-label="Previous Slide"
           >
-            <ChevronLeft size={22} />
+            <ChevronLeft size={18} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-3 sm:right-5 z-30 p-2 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
+            className="absolute right-2 sm:right-4 z-30 p-1.5 sm:p-2.5 rounded-full bg-black/30 hover:bg-white hover:text-[#991B1B] text-white transition-all shadow-md"
             aria-label="Next Slide"
           >
-            <ChevronRight size={22} />
+            <ChevronRight size={18} />
           </button>
 
           {/* Dots Indicator */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 sm:gap-2">
             {heroPromos.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
-                className={`h-2 rounded-full transition-all ${i === currentSlide ? 'w-8 bg-[#FDE047]' : 'w-2 bg-white/50'
-                  }`}
+                className={`h-1.5 sm:h-2 rounded-full transition-all ${
+                  i === currentSlide ? 'w-6 sm:w-8 bg-[#FDE047]' : 'w-1.5 sm:w-2 bg-white/50'
+                }`}
                 aria-label={`Slide ${i + 1}`}
               />
             ))}
@@ -170,35 +172,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Haldiram Style "Shop By Category" Circular Grid */}
-      <section className="py-12 bg-white border-b border-[#F0EAE1]">
+      {/* 2. Haldiram Style "Shop By Category" Grid */}
+      <section className="py-8 sm:py-12 bg-white border-b border-[#F0EAE1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between gap-2 mb-6">
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#1F2937] tracking-tight">
+              <h2 className="text-lg sm:text-2xl font-bold text-[#1F2937] tracking-tight">
                 Explore By Category
               </h2>
-              <p className="text-xs sm:text-sm text-[#6B7280]">
-                Freshly prepared street food, chaats, morning kachoris & cafe delights
+              <p className="text-[11px] sm:text-xs text-[#6B7280]">
+                Fresh street food, chaats, morning kachoris & café delights
               </p>
             </div>
             <Link
               href="/menu"
-              className="text-xs sm:text-sm font-bold text-[#C4161C] hover:underline flex items-center gap-1"
+              className="text-xs sm:text-sm font-bold text-[#C4161C] hover:underline flex items-center gap-1 shrink-0 whitespace-nowrap"
             >
-              <span>View All Menu</span>
-              <ArrowRight size={15} />
+              <span>View All</span>
+              <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2.5 sm:gap-4 md:gap-6">
             {mainCategories.map((cat) => (
               <Link
                 key={cat.id}
                 href={`/menu?cat=${cat.id}`}
-                className="group flex flex-col items-center text-center p-3 rounded-2xl bg-[#FFFBF8] border border-[#F3EDE2] hover:border-[#C4161C] hover:shadow-lg transition-all duration-300"
+                className="group flex flex-col items-center text-center p-2 sm:p-3 rounded-2xl bg-[#FFFBF8] border border-[#F3EDE2] hover:border-[#C4161C] hover:shadow-md transition-all"
               >
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-[#E5E0D8] group-hover:border-[#C4161C] mb-3 transition-colors shadow-sm bg-white">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden border border-[#E5E0D8] group-hover:border-[#C4161C] mb-2 sm:mb-3 transition-colors shadow-xs bg-white">
                   <Image
                     src={cat.image}
                     alt={cat.name}
@@ -206,10 +208,10 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-xs sm:text-sm text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-tight mb-1">
+                <h3 className="font-bold text-[11px] sm:text-xs md:text-sm text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-tight mb-0.5 line-clamp-1">
                   {cat.name}
                 </h3>
-                <span className="text-[11px] text-[#9CA3AF] font-medium">
+                <span className="text-[10px] text-[#9CA3AF] font-medium hidden xs:inline">
                   {cat.itemCount}
                 </span>
               </Link>
