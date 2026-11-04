@@ -3,15 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  ChevronLeft, ChevronRight, Sparkles, MessageCircle, ShieldCheck, 
-  Clock, ArrowRight, Utensils, Star, Gift, CheckCircle2, Heart 
+import {
+  ChevronLeft, ChevronRight, Sparkles, MessageCircle, ShieldCheck,
+  Clock, ArrowRight, Utensils, Star, Gift, CheckCircle2, Heart
 } from 'lucide-react';
 import HaldiramHeader from '../components/HaldiramHeader';
 import HaldiramFooter from '../components/HaldiramFooter';
 import FloatingWidgets from '../components/FloatingWidgets';
-import { 
-  restaurantInfo, mainCategories, heroPromos, allMenuItems, reviewsData 
+import {
+  restaurantInfo, mainCategories, heroPromos, allMenuItems, reviewsData
 } from '../data/restaurantData';
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#FFFDFB] text-[#1F2937] flex flex-col font-sans">
-      
+
       {/* Header */}
       <HaldiramHeader />
 
@@ -42,18 +42,17 @@ export default function Home() {
           {heroPromos.map((promo, idx) => (
             <div
               key={promo.title}
-              className={`absolute inset-0 transition-opacity duration-700 flex items-center bg-gradient-to-r ${promo.bgGradient} ${
-                idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-700 flex items-center bg-gradient-to-r ${promo.bgGradient} ${idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                }`}
             >
               {/* Subtle Festive Pattern Overlay */}
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#FDE047_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
               <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                
+
                 {/* Left Column: Festive Haldiram Typography */}
                 <div className="lg:col-span-7 flex flex-col items-start text-white text-left">
-                  
+
                   {/* Top Haldiram Badge */}
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-[#FEF08A] text-xs font-bold uppercase tracking-wider mb-4 border border-[#FDE047]/40">
                     <span className="w-2 h-2 rounded-full bg-[#4ade80] inline-block" />
@@ -162,9 +161,8 @@ export default function Home() {
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
-                className={`h-2 rounded-full transition-all ${
-                  i === currentSlide ? 'w-8 bg-[#FDE047]' : 'w-2 bg-white/50'
-                }`}
+                className={`h-2 rounded-full transition-all ${i === currentSlide ? 'w-8 bg-[#FDE047]' : 'w-2 bg-white/50'
+                  }`}
                 aria-label={`Slide ${i + 1}`}
               />
             ))}
@@ -223,7 +221,7 @@ export default function Home() {
       {/* 3. Haldiram Style Bestsellers Product Cards (NO CART - WhatsApp Order) */}
       <section className="py-14 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          
+
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-10 pb-4 border-b border-[#E5DFD7]">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#C4161C] block mb-1">
@@ -257,7 +255,7 @@ export default function Home() {
                       fill
                       className="object-cover"
                     />
-                    
+
                     {/* Haldiram Style Veg Square Icon */}
                     <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm p-1 rounded border border-[#22c55e] shadow-sm">
                       <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e]" />
@@ -344,7 +342,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+
             <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -445,7 +443,7 @@ export default function Home() {
       <section className="py-12 bg-gradient-to-r from-[#C4161C] via-[#9B1117] to-[#730B10] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             <div className="lg:col-span-8 space-y-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-[#FEF08A] text-xs font-bold uppercase tracking-wider">
                 <Gift size={14} />

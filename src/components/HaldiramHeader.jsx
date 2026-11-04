@@ -151,13 +151,14 @@ export default function HaldiramHeader() {
               <span className="xs:hidden">Order</span>
             </a>
 
-            {/* Mobile hamburger button */}
+            {/* Universal Hamburger Menu Button (Visible on Both Desktop & Mobile) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2.5 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-white"
+              className="flex items-center gap-1.5 p-2 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors text-xs font-bold shadow-sm"
               aria-label="Open Navigation Menu"
             >
-              <Menu size={22} />
+              <Menu size={20} />
+              <span className="hidden sm:inline">Menu</span>
             </button>
           </div>
 
@@ -182,9 +183,9 @@ export default function HaldiramHeader() {
 
       </header>
 
-      {/* FULLSCREEN SOLID MOBILE DRAWER MENU (Glitch-Free & No Background Peeking) */}
+      {/* FULLSCREEN SOLID DRAWER MENU (Universal: Works on Laptop & Mobile without Glitch) */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden flex justify-end">
+        <div className="fixed inset-0 z-50 flex justify-end">
           
           {/* 1. Backdrop */}
           <div
