@@ -53,12 +53,12 @@ export default function Home() {
                   alt={promo.dishName || promo.title}
                   fill
                   priority={idx === 0}
-                  className="object-cover object-center scale-105 transition-transform duration-1000 ease-out"
+                  className="object-cover object-center scale-105 transition-transform duration-1000 ease-out brightness-[0.75]"
                 />
-                {/* Cinematic Dark Vignette: deep culinary contrast keeping food deliciously visible & text 100% crisp */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/75 to-black/35" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-black/30" />
-                <div className="absolute inset-0 bg-amber-950/20 mix-blend-multiply" />
+                {/* Guaranteed 100% Text Legibility: Uniform dark base + Directional culinary gradient + Top/bottom vignette */}
+                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/95 via-black/85 to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
               </div>
 
               <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-11 sm:py-8 md:py-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-center">
@@ -67,20 +67,20 @@ export default function Home() {
                 <div className="lg:col-span-7 flex flex-col items-start text-white text-left">
 
                   {/* Top Haldiram Badge */}
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/20 backdrop-blur-md text-[#FEF08A] text-[9px] sm:text-xs font-bold uppercase tracking-wider mb-2 border border-[#FDE047]/40 shadow-sm">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-[#FEF08A] text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2 border border-[#FDE047]/60 shadow-lg">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] inline-block animate-pulse" />
                     <span>{promo.highlight}</span>
                   </div>
 
-                  <h1 className="font-serif text-xl sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-1.5 drop-shadow-md">
+                  <h1 className="font-serif text-xl sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                     {promo.title}
                   </h1>
 
-                  <p className="text-[10px] sm:text-xs md:text-sm font-bold tracking-widest text-[#FDE047] uppercase mb-2 sm:mb-3 drop-shadow">
+                  <p className="text-[11px] sm:text-xs md:text-sm font-black tracking-widest text-[#FDE047] uppercase mb-2 sm:mb-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
                     {promo.subtitle}
                   </p>
 
-                  <p className="hidden sm:block text-xs sm:text-sm md:text-base text-white/95 leading-relaxed mb-4 font-light max-w-xl drop-shadow">
+                  <p className="hidden sm:block text-xs sm:text-sm md:text-base text-white/95 leading-relaxed mb-4 font-normal max-w-xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
                     {promo.description}
                   </p>
 
@@ -108,14 +108,14 @@ export default function Home() {
                   </div>
 
                   {/* Trust Badges Bar inside Hero */}
-                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[9px] sm:text-xs text-white/90 border-t border-white/20 pt-2 mb-2 sm:mb-0">
-                    <span className="flex items-center gap-1 font-medium">
-                      <span className="text-[#4ade80] font-bold">✓</span> RO Water
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3.5 text-[9px] sm:text-xs text-white/95 bg-black/40 backdrop-blur-xs px-2.5 sm:px-3 py-1 rounded-xl border border-white/15 mb-2 sm:mb-0 shadow-sm">
+                    <span className="flex items-center gap-1 font-semibold">
+                      <span className="text-[#4ade80] font-black">✓</span> RO Water
                     </span>
-                    <span className="flex items-center gap-1 font-medium">
-                      <span className="text-[#4ade80] font-bold">✓</span> 100% Pure Veg
+                    <span className="flex items-center gap-1 font-semibold">
+                      <span className="text-[#4ade80] font-black">✓</span> 100% Pure Veg
                     </span>
-                    <span className="flex items-center gap-1 font-medium">
+                    <span className="flex items-center gap-1 font-semibold">
                       <span className="text-[#FDE047]">★</span> 4.9 Rating in Chittorgarh
                     </span>
                   </div>
@@ -124,12 +124,13 @@ export default function Home() {
 
                 {/* Right Column: Haldiram Arch Food Showcase Card (Tablet & Desktop) */}
                 <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
-                  <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-4 border-[#FDE047]/80 shadow-2xl bg-black/40 backdrop-blur-md p-2">
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                  <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-4 border-[#FDE047]/80 shadow-2xl bg-black/60 backdrop-blur-md p-2">
+                    <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-black/30">
                       <Image
                         src={promo.image}
                         alt={promo.dishName || promo.title}
                         fill
+                        sizes="(min-width: 1024px) 384px, 100vw"
                         priority={idx === 0}
                         className="object-cover"
                       />
