@@ -51,7 +51,7 @@ export default function HeroSlider({ onOpenOrderModal }) {
             <div className="relative w-full h-full rounded-full overflow-hidden bg-white">
               <Image
                 src="/logo.jpg"
-                alt="Mr. & Mrs. Panipuriwala Logo"
+                alt="Mr Mrs Panipuriwala Logo"
                 fill
                 className="object-cover"
                 priority
@@ -72,7 +72,7 @@ export default function HeroSlider({ onOpenOrderModal }) {
 
         {/* Grand Royal Typography */}
         <h1 className="reveal-element reveal-delay-2 font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#FAF8F5] mb-3 leading-[1.15]">
-          Mr. & Mrs.{' '}
+          Mr Mrs{' '}
           <span className="block sm:inline bg-gradient-to-r from-[#D4B999] via-[#FAF8F5] to-[#B99470] bg-clip-text text-transparent">
             Panipuriwala
           </span>

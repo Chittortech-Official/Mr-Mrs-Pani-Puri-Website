@@ -135,7 +135,7 @@ export default function LocationSection() {
 
               <a
                 href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
-                  "Hello Mr. & Mrs. Panipuriwala! I'm planning to visit and would like to confirm your open status."
+                  "Hello Mr Mrs Panipuriwala! I'm planning to visit and would like to confirm your open status."
                 )}`}
                 target="_blank"
                 rel="noreferrer"
@@ -153,7 +153,7 @@ export default function LocationSection() {
             {/* Embedded Google Map */}
             <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-[#E8DFD3] shadow-xl relative bg-[#E8DFD3]">
               <iframe
-                title="Mr and Mrs Panipuriwala Location Map"
+                title="Mr Mrs Panipuriwala Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14516.32684824707!2d75.0210214!3d24.9863484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3968b556f890cf25%3A0xb30491a67ad84b72!2sBegun%2C%20Rajasthan%20312023!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
@@ -166,7 +166,7 @@ export default function LocationSection() {
               
               {/* Map floating pin card */}
               <div className="absolute top-4 left-4 p-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-[#B99470]/30 max-w-xs hidden sm:block">
-                <p className="text-[11px] font-bold text-[#141110]">Mr. & Mrs. Panipuriwala & Chathouse</p>
+                <p className="text-[11px] font-bold text-[#141110]">Mr Mrs Panipuriwala & Chathouse</p>
                 <p className="text-[10px] text-[#766C66]">Fawwara Chowk, Begun, Chittorgarh</p>
               </div>
             </div>

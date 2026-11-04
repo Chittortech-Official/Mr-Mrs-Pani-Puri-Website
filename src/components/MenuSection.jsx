@@ -142,7 +142,7 @@ export default function MenuSection({ onSelectItemForOrder }) {
                 
                 <a
                   href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
-                    `Hello Mr. & Mrs. Panipuriwala! I would like to order: *${item.name}* (₹${item.price}).`
+                    `Hello Mr Mrs Panipuriwala! I would like to order: *${item.name}* (₹${item.price}).`
                   )}`}
                   target="_blank"
                   rel="noreferrer"

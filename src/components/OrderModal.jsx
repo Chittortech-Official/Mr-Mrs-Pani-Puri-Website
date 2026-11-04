@@ -24,7 +24,7 @@ export default function OrderModal({ isOpen, onClose, preselectedItem }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let message = `*Namaste Mr. & Mrs. Panipuriwala & Chathouse!*\n`;
+    let message = `*Namaste Mr Mrs Panipuriwala & Chathouse!*\n`;
     message += `I would like to submit a request:\n\n`;
     message += `*Request Type:* ${
       requestType === 'order'
@@ -46,7 +46,7 @@ export default function OrderModal({ isOpen, onClose, preselectedItem }) {
     }
 
     message += `*Dietary Note:* 100% Pure Veg (${dietPreference})\n`;
-    message += `\nSent via Mr. & Mrs. Panipuriwala Official Website.`;
+    message += `\nSent via Mr Mrs Panipuriwala Official Website.`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/${restaurantInfo.whatsapp}?text=${encoded}`, '_blank');
@@ -68,7 +68,7 @@ export default function OrderModal({ isOpen, onClose, preselectedItem }) {
                 Book / Place Your Order
               </h3>
               <p className="text-[11px] text-[#D4B999]">
-                Mr. & Mrs. Panipuriwala & Chathouse
+                Mr Mrs Panipuriwala & Chathouse
               </p>
             </div>
           </div>

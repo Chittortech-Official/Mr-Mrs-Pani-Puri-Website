@@ -6,7 +6,7 @@ import { restaurantInfo } from '../data/restaurantData';
 
 export default function FloatingWidgets() {
   const whatsappUrl = `https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
-    "Namaste Mr. & Mrs. Panipuriwala! I would like to inquire about ordering / table booking."
+    "Namaste Mr Mrs Panipuriwala! I would like to inquire about ordering / table booking."
   )}`;
 
   return (
@@ -28,7 +28,7 @@ export default function FloatingWidgets() {
       {/* Call Floating Circle */}
       <a
         href={`tel:${restaurantInfo.primaryPhone.replace(/\s+/g, '')}`}
-        aria-label="Call Mr. & Mrs. Panipuriwala"
+        aria-label="Call Mr Mrs Panipuriwala"
         className="w-12 h-12 sm:w-13 sm:h-13 bg-[#B99470] hover:bg-[#9E7B58] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group relative border-2 border-white/90"
       >
         <Phone size={22} className="fill-current" />

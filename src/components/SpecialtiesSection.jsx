@@ -124,7 +124,7 @@ export default function SpecialtiesSection({ onSelectItemForOrder }) {
               <div className="px-6 pb-6 pt-2 border-t border-white/5">
                 <a
                   href={`https://wa.me/${restaurantInfo.whatsapp}?text=${encodeURIComponent(
-                    `Hello Mr. & Mrs. Panipuriwala! I would like to order: *${item.name}* (${item.price}).`
+                    `Hello Mr Mrs Panipuriwala! I would like to order: *${item.name}* (${item.price}).`
                   )}`}
                   target="_blank"
                   rel="noreferrer"

@@ -80,7 +80,7 @@ export default function Navbar({ onOpenOrderModal }) {
               <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#B99470] shadow-lg group-hover:scale-105 transition-transform duration-300 bg-white">
                 <Image
                   src="/logo.jpg"
-                  alt="Mr. & Mrs. Panipuriwala Logo"
+                  alt="Mr Mrs Panipuriwala Logo"
                   fill
                   className="object-cover"
                   priority
@@ -89,7 +89,7 @@ export default function Navbar({ onOpenOrderModal }) {
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
                   <span className="font-serif text-lg sm:text-2xl font-bold tracking-wider text-white group-hover:text-[#B99470] transition-colors">
-                    Mr. & Mrs.
+                    Mr Mrs
                   </span>
                   <span className="hidden sm:inline-block text-[9px] uppercase tracking-widest text-[#B99470] px-1.5 py-0.5 border border-[#B99470]/40 rounded">
                     Est. 2023
@@ -163,7 +163,7 @@ export default function Navbar({ onOpenOrderModal }) {
                   <Image src="/logo.jpg" alt="Logo" fill className="object-cover" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-bold text-white">Mr. & Mrs.</h3>
+                  <h3 className="font-serif text-lg font-bold text-white">Mr Mrs</h3>
                   <p className="text-[10px] text-[#B99470] uppercase tracking-wider">
                     Panipuriwala & Chathouse
                   </p>

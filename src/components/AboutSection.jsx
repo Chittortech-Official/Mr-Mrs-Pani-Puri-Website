@@ -22,7 +22,7 @@ export default function AboutSection({ onOpenOrderModal }) {
           </h2>
           <div className="w-24 h-0.5 bg-[#B99470] mx-auto mb-6" />
           <p className="text-[#766C66] text-sm sm:text-base leading-relaxed">
-            Established in 2023 at Fawwara Chowk, Pratap Nagar, Begun, Mr. & Mrs. Panipuriwala & Chathouse was born from a simple passion: to elevate beloved Indian street food and chaat into an unforgettable, hygienic, and royal culinary experience.
+            Established in 2023 at Fawwara Chowk, Pratap Nagar, Begun, Mr Mrs Panipuriwala & Chathouse was born from a simple passion: to elevate beloved Indian street food and chaat into an unforgettable, hygienic, and royal culinary experience.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default function AboutSection({ onOpenOrderModal }) {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white aspect-[3/4]">
                 <Image
                   src="/114054.jpg"
-                  alt="Mr & Mrs Panipuriwala Original Menu Cover"
+                  alt="Mr Mrs Panipuriwala Original Menu Cover"
                   fill
                   className="object-cover"
                 />
@@ -47,7 +47,7 @@ export default function AboutSection({ onOpenOrderModal }) {
                     Authentic Original Menu
                   </span>
                   <h4 className="font-serif text-xl font-bold text-white">
-                    Mr. & Mrs. Panipuriwala
+                    Mr Mrs Panipuriwala
                   </h4>
                   <p className="text-xs text-[#E8DFD3]/90">Begun, Chittorgarh • Est. 2023</p>
                 </div>

@@ -1,6 +1,6 @@
 export const restaurantInfo = {
-  name: "Mr. & Mrs. Panipuriwala & Chathouse",
-  shortName: "Mr. & Mrs. Pani Puri",
+  name: "Mr Mrs Panipuriwala & Chathouse",
+  shortName: "Mr Mrs Pani Puri",
   tagline: "AUTHENTIC STREET FOOD • CHAAT • CAFÉ",
   slogan: "Where Royal Heritage Flavors Meet Modern Café Indulgence",
   rating: "4.9",
@@ -32,7 +32,7 @@ export const restaurantInfo = {
 
 export const heroSlides = [
   {
-    title: "Mr. & Mrs. Panipuriwala",
+    title: "Mr Mrs Panipuriwala",
     subtitle: "Authentic Street Food • Chaat • Café",
     description: "Crispy puris, tangy mint water, rich dahi chaats, and sizzling café specialties crafted with love at Fawwara Chowk, Begun.",
     tag: "PURE VEG • EST. 2023",
@@ -1077,7 +1077,7 @@ export const reviewsData = [
     rating: 5,
     date: "August 2026",
     comment:
-      "Mr. & Mrs. Panipuriwala sets a new benchmark for street food hygiene. We booked their catering for our family anniversary celebration at Fawwara Chowk and all guests loved every single dish!",
+      "Mr Mrs Panipuriwala sets a new benchmark for street food hygiene. We booked their catering for our family anniversary celebration at Fawwara Chowk and all guests loved every single dish!",
     verified: true,
     dish: "Royal Combo Chaat & Catering",
   },

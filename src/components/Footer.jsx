@@ -26,7 +26,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide">
-                  Mr. & Mrs.
+                  Mr Mrs
                 </h3>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#B99470] font-semibold">
                   Panipuriwala & Chathouse
@@ -135,7 +135,7 @@ export default function Footer() {
 
         {/* Bottom Strip */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#766C66]">
-          <p>© {currentYear} Mr. & Mrs. Panipuriwala & Chathouse. All rights reserved.</p>
+          <p>© {currentYear} Mr Mrs Panipuriwala & Chathouse. All rights reserved.</p>
           <p className="flex items-center gap-1.5 text-center">
             <span>Crafted with</span>
             <Heart size={13} className="text-[#883563] fill-current" />
