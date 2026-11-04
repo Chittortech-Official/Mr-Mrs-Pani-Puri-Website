@@ -4,7 +4,7 @@ import React, { useState, useMemo, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Search, MessageCircle, Filter, ArrowUpDown, Sparkles, Check, ChevronRight } from 'lucide-react';
+import { Search, MessageCircle, Filter, ArrowUpDown, Sparkles, Check, ChevronRight, X } from 'lucide-react';
 import HaldiramHeader from '../../components/HaldiramHeader';
 import HaldiramFooter from '../../components/HaldiramFooter';
 import FloatingWidgets from '../../components/FloatingWidgets';
@@ -95,8 +95,8 @@ function MenuContent() {
             </p>
           </div>
 
-          {/* Search & Sort Controls */}
-          <div className="flex flex-wrap items-center gap-3">
+          {/* Search, Category & Sort Controls */}
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             {/* Search Input */}
             <div className="relative">
               <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" />
@@ -105,13 +105,40 @@ function MenuContent() {
                 placeholder="Search this menu..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9 pr-3 py-2 rounded-full bg-[#FAF7F2] border border-[#E5DFD7] text-xs text-[#1F2937] outline-none focus:border-[#C4161C] w-48 sm:w-60"
+                className="pl-9 pr-8 py-2 rounded-full bg-[#FAF7F2] border border-[#E5DFD7] text-xs text-[#1F2937] outline-none focus:border-[#C4161C] w-48 sm:w-60"
               />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#9CA3AF] hover:text-[#1F2937] transition-colors"
+                  aria-label="Clear Search"
+                >
+                  <X size={14} />
+                </button>
+              )}
+            </div>
+
+            {/* Category Select (Mobile & Tablet - Replaces horizontal scroll) */}
+            <div className="lg:hidden flex items-center gap-1.5 bg-[#FAF7F2] border border-[#E5DFD7] rounded-full px-3 py-1.5 text-xs">
+              <Filter size={13} className="text-[#C4161C] shrink-0" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="bg-transparent text-xs font-bold text-[#1F2937] outline-none cursor-pointer max-w-[140px] xs:max-w-[180px] truncate"
+                aria-label="Filter by Category"
+              >
+                {categories.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name}
+                  </option>
+                ))}
+              </select>
             </div>
 
             {/* Sort Select */}
             <div className="flex items-center gap-1.5 bg-[#FAF7F2] border border-[#E5DFD7] rounded-full px-3 py-1.5 text-xs">
-              <ArrowUpDown size={13} className="text-[#6B7280]" />
+              <ArrowUpDown size={13} className="text-[#6B7280] shrink-0" />
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -161,22 +188,26 @@ function MenuContent() {
             </div>
           </div>
 
-          {/* Category Scroll Pills (Mobile / Tablet) */}
-          <div className="lg:hidden col-span-1 flex items-center gap-2 overflow-x-auto pb-2 -mt-4 mb-2 no-scrollbar">
-            {categories.map((c) => (
+          {/* Active Category Filter Tag (Mobile / Tablet - No Horizontal Scroll) */}
+          {selectedCategory !== 'all' && (
+            <div className="lg:hidden col-span-1 -mt-4 mb-2 flex items-center justify-between bg-[#FFF1E8] border border-[#FDD5C2] rounded-xl px-3.5 py-2 text-xs">
+              <div className="flex items-center gap-1.5 text-[#C4161C] font-bold">
+                <Filter size={13} />
+                <span>{categories.find((c) => c.id === selectedCategory)?.name}</span>
+                <span className="text-[10px] bg-[#C4161C] text-white px-1.5 py-0.2 rounded-full">
+                  {filteredItems.length}
+                </span>
+              </div>
               <button
-                key={c.id}
-                onClick={() => setSelectedCategory(c.id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap shrink-0 border ${
-                  selectedCategory === c.id
-                    ? 'bg-[#C4161C] text-white border-[#C4161C]'
-                    : 'bg-white text-[#4B5563] border-[#E5DFD7]'
-                }`}
+                type="button"
+                onClick={() => setSelectedCategory('all')}
+                className="text-[#730B10] hover:text-[#C4161C] text-xs font-bold flex items-center gap-1 transition-colors"
               >
-                {c.name}
+                <span>Clear</span>
+                <X size={13} />
               </button>
-            ))}
-          </div>
+            </div>
+          )}
 
           {/* Product Cards Grid (9 Cols on Desktop) */}
           <div className="lg:col-span-9">
