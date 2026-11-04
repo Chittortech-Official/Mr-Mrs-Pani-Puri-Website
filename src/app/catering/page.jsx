@@ -224,7 +224,7 @@ export default function CateringPage() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.01]"
+                  className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md flex items-center justify-center gap-2 transition-colors"
                 >
                   <MessageCircle size={18} />
                   <span>Send Catering Inquiry via WhatsApp</span>

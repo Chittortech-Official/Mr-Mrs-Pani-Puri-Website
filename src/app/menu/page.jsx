@@ -179,7 +179,7 @@ function MenuContent() {
                           src={item.image}
                           alt={item.name}
                           fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="object-cover"
                         />
 
                         {/* Haldiram Style Veg Square */}
@@ -226,7 +226,7 @@ function MenuContent() {
                         )}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wider uppercase transition-all shadow-md hover:scale-[1.02]"
+                        className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wider uppercase transition-colors shadow-md"
                       >
                         <MessageCircle size={15} />
                         <span>Order on WhatsApp</span>

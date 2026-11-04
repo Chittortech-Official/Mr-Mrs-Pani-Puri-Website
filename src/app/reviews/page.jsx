@@ -93,7 +93,7 @@ export default function ReviewsPage() {
             href={restaurantInfo.instagramUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] text-white text-xs font-bold uppercase tracking-wider shadow-md hover:scale-105 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] text-white text-xs font-bold uppercase tracking-wider shadow-md hover:opacity-90 transition-opacity"
           >
             <span>Follow {restaurantInfo.instagram}</span>
           </a>

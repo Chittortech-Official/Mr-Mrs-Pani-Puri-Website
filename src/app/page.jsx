@@ -80,7 +80,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-center gap-3">
                   <Link
                     href={promo.ctaLink}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C4161C] hover:bg-[#A51217] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C4161C] hover:bg-[#A51217] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md transition-colors"
                   >
                     <span>{promo.ctaText}</span>
                     <ArrowRight size={16} />
@@ -92,7 +92,7 @@ export default function Home() {
                     )}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md transition-colors"
                   >
                     <MessageCircle size={16} />
                     <span>Quick WhatsApp Order</span>
@@ -177,7 +177,7 @@ export default function Home() {
                     src={cat.image}
                     alt={cat.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover"
                   />
                 </div>
                 <h3 className="font-bold text-xs sm:text-sm text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-tight mb-1">
@@ -227,7 +227,7 @@ export default function Home() {
                       src={item.image}
                       alt={item.name}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover"
                     />
                     
                     {/* Haldiram Style Veg Square Icon */}
@@ -274,7 +274,7 @@ export default function Home() {
                     )}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wider uppercase transition-all shadow-md hover:scale-[1.02]"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wider uppercase transition-colors shadow-md"
                   >
                     <MessageCircle size={15} />
                     <span>Order on WhatsApp</span>
@@ -305,13 +305,13 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-lg transition-all">
+            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
                   alt="Royal Combo Chaat"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover"
                 />
               </div>
               <div className="p-4">
@@ -328,13 +328,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-lg transition-all">
+            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80"
                   alt="Grand Basket Chaat"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover"
                 />
               </div>
               <div className="p-4">
@@ -351,13 +351,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-lg transition-all">
+            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
                   alt="Royal Paan Shake"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover"
                 />
               </div>
               <div className="p-4">
@@ -374,13 +374,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-lg transition-all">
+            <div className="rounded-2xl overflow-hidden border border-[#ECE7DE] bg-[#FFFDFB] group shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80"
                   alt="Lotus Biscoff Frappe"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover"
                 />
               </div>
               <div className="p-4">
