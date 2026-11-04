@@ -6,7 +6,7 @@ export const restaurantInfo = {
   slogan: "Taste of Tradition, Prepared with Purity",
   rating: "4.9",
   ratingCount: "380+",
-  established: "2023",
+  established: "2026",
   isPureVeg: true,
   description:
     "Begun & Chittorgarh's premier destination for authentic street food, artisan chaats, and contemporary café delights. Crispy puris crafted with pure RO mineral waters, slow-simmered chutneys, artisan coffees, and thick shakes.",
@@ -26,7 +26,7 @@ export const restaurantInfo = {
   highlights: [
     { label: "100% Pure Veg", value: "Strict Pure Vegetarian Kitchen" },
     { label: "Hygiene Standard", value: "RO Purified Mineral Water" },
-    { label: "Established", value: "Since 2023 at Begun" },
+    { label: "Established", value: "Est. 2026 at Begun" },
     { label: "Guest Rating", value: "4.9 ★ (380+ Verified Reviews)" },
   ],
 };

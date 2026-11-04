@@ -18,7 +18,7 @@ const poppins = Poppins({
 export const metadata = {
   title: "Mr Mrs Panipuriwala & Chathouse | Authentic Street Food, Chaat & Café in Chittorgarh",
   description:
-    "Experience Rajasthan's finest authentic chaats, crispy gol gappe, artisan coffees, thick shakes, and gourmet street food at Mr Mrs Panipuriwala & Chathouse, Fawwara Chowk, Begun, Chittorgarh. 100% Pure Veg • Est. 2023.",
+    "Experience Rajasthan's finest authentic chaats, crispy gol gappe, artisan coffees, thick shakes, and gourmet street food at Mr Mrs Panipuriwala & Chathouse, Fawwara Chowk, Begun, Chittorgarh. 100% Pure Veg • Est. 2026.",
   keywords: [
     "Mr Mrs Panipuriwala",
     "Mr Mrs Panipuriwala and Chathouse",

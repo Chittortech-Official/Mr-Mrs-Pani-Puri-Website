@@ -27,7 +27,7 @@ export default function AboutPage() {
       <section className="bg-[#FAF7F2] py-14 border-b border-[#ECE7DE]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <span className="inline-block px-3 py-1 rounded-full bg-[#C4161C]/10 text-[#C4161C] text-xs font-bold uppercase tracking-wider mb-3">
-            Since 2023 • Begun, Chittorgarh
+            Est. 2026 • Begun, Chittorgarh
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F2937] leading-tight mb-4">
             The Legend of Mr Mrs Panipuriwala & Chathouse
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 <h4 className="font-serif text-xl font-bold text-white">
                   Mr Mrs Panipuriwala
                 </h4>
-                <p className="text-xs text-white/80">Fawwara Chowk, Begun • Est. 2023</p>
+                <p className="text-xs text-white/80">Fawwara Chowk, Begun • Est. 2026</p>
               </div>
             </div>
 

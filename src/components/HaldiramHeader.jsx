@@ -153,12 +153,12 @@ export default function HaldiramHeader() {
                 />
               </div>
               <div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1.5">
                   <span className="text-base sm:text-xl font-black tracking-tight text-[#C4161C] font-serif leading-none">
                     Mr Mrs
                   </span>
-                  <span className="hidden xs:inline text-[9px] px-1 py-0.2 rounded bg-[#C4161C]/10 text-[#C4161C] font-bold uppercase">
-                    Begun
+                  <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#C4161C] text-white font-bold uppercase tracking-wider">
+                    EST. 2026
                   </span>
                 </div>
                 <p className="text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-[#730B10] leading-tight">
@@ -343,7 +343,12 @@ export default function HaldiramHeader() {
                     <Image src="/logo.jpg" alt="Logo" fill className="object-cover" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-base font-bold text-[#C4161C]">Mr Mrs</h3>
+                    <div className="flex items-center gap-1.5">
+                      <h3 className="font-serif text-base font-bold text-[#C4161C]">Mr Mrs</h3>
+                      <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#C4161C] text-white font-bold uppercase tracking-wider">
+                        EST. 2026
+                      </span>
+                    </div>
                     <p className="text-[10px] text-[#730B10] uppercase font-semibold">Panipuriwala & Chathouse</p>
                   </div>
                 </div>
