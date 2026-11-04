@@ -38,7 +38,7 @@ export const mainCategories = [
     shortName: "Pani Puri",
     slug: "chaat",
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
-    itemCount: "8 Varieties",
+    itemCount: "9 Items",
     desc: "Crispy puris, spiced yellow peas ragada & tangy mint water",
   },
   {
@@ -47,7 +47,7 @@ export const mainCategories = [
     shortName: "Dahi Chaat",
     slug: "dahichaat",
     image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
-    itemCount: "9 Varieties",
+    itemCount: "9 Items",
     desc: "Thick whipped sweetened curd, saunth chutney & savory sev",
   },
   {
@@ -56,7 +56,7 @@ export const mainCategories = [
     shortName: "Pyaaz Kachori",
     slug: "snacks",
     image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
-    itemCount: "7 Varieties",
+    itemCount: "7 Items",
     desc: "Jodhpur pyaaz kachori, samosa, mirchi bada & hot indori poha",
   },
   {
@@ -65,7 +65,7 @@ export const mainCategories = [
     shortName: "Bhelpuri",
     slug: "bhel",
     image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80",
-    itemCount: "4 Varieties",
+    itemCount: "4 Items",
     desc: "Mumbaiya sweet chatpati & Puneri matki spicy bhel",
   },
   {
@@ -74,7 +74,7 @@ export const mainCategories = [
     shortName: "Hot Coffee",
     slug: "hotdrinks",
     image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
-    itemCount: "12 Varieties",
+    itemCount: "12 Items",
     desc: "Espresso, Lotus Biscoff Latte, Nutella hot chocolate",
   },
   {
@@ -83,7 +83,7 @@ export const mainCategories = [
     shortName: "Cold Coffee",
     slug: "coldcoffee",
     image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
-    itemCount: "10 Varieties",
+    itemCount: "11 Items",
     desc: "Biscoff frappe, caramel swirl & vanilla sweet cream latte",
   },
   {
@@ -92,7 +92,7 @@ export const mainCategories = [
     shortName: "Thick Shakes",
     slug: "shakes",
     image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
-    itemCount: "16 Varieties",
+    itemCount: "16 Items",
     desc: "Royal Paan, Raj Bhog, Nutella, KitKat & Choco Lust",
   },
   {
@@ -101,7 +101,7 @@ export const mainCategories = [
     shortName: "Mocktails",
     slug: "mocktails",
     image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
-    itemCount: "12 Varieties",
+    itemCount: "8 Items",
     desc: "Virgin mojitos, blue lagoon, iced tea & fruit slushies",
   },
   {
@@ -110,7 +110,7 @@ export const mainCategories = [
     shortName: "Burgers",
     slug: "burgers",
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
-    itemCount: "14 Varieties",
+    itemCount: "13 Items",
     desc: "Paneer tandoori club, grilled veg sandwiches & peri-peri fries",
   },
   {
@@ -119,7 +119,7 @@ export const mainCategories = [
     shortName: "Pizzas",
     slug: "pizza",
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
-    itemCount: "10 Varieties",
+    itemCount: "7 Items",
     desc: "Cheese burst pizza, paneer tandoori & herb garlic bread",
   },
   {
@@ -128,7 +128,7 @@ export const mainCategories = [
     shortName: "Momos",
     slug: "momos",
     image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80",
-    itemCount: "10 Varieties",
+    itemCount: "6 Items",
     desc: "Steamed & tandoori momos, desi butter masala maggi",
   },
   {
@@ -137,7 +137,7 @@ export const mainCategories = [
     shortName: "Chinese",
     slug: "chinese",
     image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
-    itemCount: "11 Varieties",
+    itemCount: "8 Items",
     desc: "Chilli paneer, veg hakka noodles, manchurian & fried rice",
   },
 ];
@@ -204,7 +204,7 @@ export const allMenuItems = [
     desc: "Crispy puris crushed and laden with savory spiced peas ragada, sweet tamarind, and fine sev.",
     isBestseller: true,
     tag: "Bestseller",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "sev-batata-puri",
@@ -215,7 +215,7 @@ export const allMenuItems = [
     desc: "Flat crispy puris topped with seasoned diced potatoes, tangy chutneys, onions, and golden nylon sev.",
     isBestseller: true,
     tag: "Customer Favorite",
-    image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "ragada-puri-gol",
@@ -224,7 +224,7 @@ export const allMenuItems = [
     name: "Ragada Puri (Gol Puri)",
     price: 40,
     desc: "Crispy round puris filled with warm flavorful yellow peas ragada, spices, and fresh herbs.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "ragada-puri-chura",
@@ -233,7 +233,7 @@ export const allMenuItems = [
     name: "Ragada Puri (Chura Puri)",
     price: 40,
     desc: "Crushed puris submerged in hot spiced ragada, crowned with coriander, onions, and crispy sev.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "aloo-tikki-chaat",
@@ -264,7 +264,7 @@ export const allMenuItems = [
     name: "French Fries Chatpati Chaat",
     price: 50,
     desc: "Crispy golden potato fries given an Indian twist with chatpata masala, chutneys, and fresh onion.",
-    image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "tokri-chaat",
@@ -286,7 +286,7 @@ export const allMenuItems = [
     desc: "Ultimate tasting platter: 2 Sev Puri + 2 Ragada Puri + 2 Dahi Puri + 2 Tokri Chaat + 2 Masala Puri.",
     isBestseller: true,
     tag: "Best Value",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
   },
 
   // --- DAHI CHAAT ---
@@ -297,7 +297,7 @@ export const allMenuItems = [
     name: "Dahi Ragada Puri",
     price: 50,
     desc: "Crispy puris stuffed with savory ragada and drenched in sweetened chilled creamy curd and sweet tamarind.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "dahi-sev-puri",
@@ -308,7 +308,7 @@ export const allMenuItems = [
     desc: "The quintessential Indian chaat: puris loaded with spiced potatoes, chilled dahi, chaat masala, and mounds of sev.",
     isBestseller: true,
     tag: "Top Rated",
-    image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "dahi-aloo-tikki-chaat",
@@ -336,7 +336,7 @@ export const allMenuItems = [
     name: "Dahi French Fries Chaat",
     price: 60,
     desc: "Fusion delicacy of crispy golden fries swirled in spiced dahi, chutneys, and chaat spices.",
-    image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "dahi-tokri-chaat",
@@ -459,7 +459,7 @@ export const allMenuItems = [
     name: "Aloo Bada (Batata Vada)",
     price: 20,
     desc: "Spiced mashed potato ball coated in crispy golden chickpea batter, served with spicy green chutney.",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "bread-pakoda",
@@ -468,7 +468,7 @@ export const allMenuItems = [
     name: "Stuffed Paneer Bread Pakoda",
     price: 20,
     desc: "Triangle bread slice stuffed with spicy potato mixture, dipped in gram flour batter and fried golden crisp.",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "mirchi-bada",
@@ -508,7 +508,7 @@ export const allMenuItems = [
     name: "Bold Americano (Black Coffee)",
     price: 60,
     desc: "Double shot of freshly extracted espresso diluted with hot water for pure coffee lovers.",
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "cappuccino",
@@ -518,7 +518,7 @@ export const allMenuItems = [
     price: 80,
     desc: "Classic balance of rich espresso, steamed milk, and thick dense foam dusted with cocoa.",
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "latte",
@@ -536,7 +536,7 @@ export const allMenuItems = [
     name: "Café Mocha",
     price: 100,
     desc: "Decadent harmony of rich espresso, molten chocolate sauce, and velvety steamed milk.",
-    image: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "hazelnut-latte",
@@ -554,7 +554,7 @@ export const allMenuItems = [
     name: "Salted Caramel Latte",
     price: 120,
     desc: "Espresso and steamed milk with buttery caramel swirl and hints of sea salt.",
-    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "irish-latte",
@@ -574,7 +574,7 @@ export const allMenuItems = [
     desc: "Hot espresso blended with creamy Lotus Biscoff speculoos spread and biscuit dust.",
     isBestseller: true,
     tag: "Trending",
-    image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "regular-hot-chocolate",
@@ -583,7 +583,7 @@ export const allMenuItems = [
     name: "Regular Hot Chocolate",
     price: 50,
     desc: "Comforting mug of velvety hot chocolate brewed with rich dark cocoa.",
-    image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "caramel-hot-chocolate",
@@ -592,7 +592,7 @@ export const allMenuItems = [
     name: "Caramel Hot Chocolate",
     price: 60,
     desc: "Thick hot chocolate swirled with silky warm caramel sauce.",
-    image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "nutella-hot-chocolate",
@@ -602,7 +602,7 @@ export const allMenuItems = [
     price: 80,
     desc: "Pure indulgence: steamed milk melted with rich hazelnut Nutella spread.",
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
 
   // --- COLD COFFEE & FRAPPES ---
@@ -688,7 +688,7 @@ export const allMenuItems = [
     name: "Iced Latte",
     price: 100,
     desc: "Chilled whole milk poured over ice with a rich floating layer of freshly brewed espresso.",
-    image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "vanilla-sweet-cream-cold-latte",
@@ -697,7 +697,7 @@ export const allMenuItems = [
     name: "Vanilla Sweet Cream Cold Latte",
     price: 120,
     desc: "Velvety iced coffee topped with handcrafted vanilla sweet cream float.",
-    image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "iced-mocha",
@@ -745,7 +745,7 @@ export const allMenuItems = [
     name: "Wild Blueberry Shake",
     price: 80,
     desc: "Fruity and tangy wild blueberry pulp blended into thick creamy milk.",
-    image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "mango-shake",
@@ -754,7 +754,7 @@ export const allMenuItems = [
     name: "Alphonso Mango Shake",
     price: 80,
     desc: "Sweet sun-ripened mango pulp blended with rich whole milk and dry fruits.",
-    image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "strawberry-shake",
@@ -763,7 +763,7 @@ export const allMenuItems = [
     name: "Fresh Strawberry Shake",
     price: 80,
     desc: "Sweet and creamy shake loaded with fresh strawberry flavors.",
-    image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "black-currant-shake",
@@ -772,7 +772,7 @@ export const allMenuItems = [
     name: "Black Currant Shake",
     price: 100,
     desc: "Deep purple black currant berries blended into luscious thick shake.",
-    image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "kitkat-shake",
@@ -850,7 +850,7 @@ export const allMenuItems = [
     name: "Fruit Freak Lust Shake",
     price: 180,
     desc: "Monster shake packed with mixed berries, fruit jellies, ice cream, and crunchy dry fruit toppings.",
-    image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "choco-lust-shake",
@@ -938,7 +938,7 @@ export const allMenuItems = [
     name: "Chilled Lemon Iced Tea",
     price: 80,
     desc: "Slow-brewed black tea chilled with real lemon juice and fresh garden mint.",
-    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
   },
 
   // --- BURGERS, SANDWICHES & FRIES ---
@@ -949,7 +949,7 @@ export const allMenuItems = [
     name: "Desi Aloo Tikki Burger",
     price: 50,
     desc: "Crispy spiced potato patty nestled in a soft toasted sesame bun with signature sauce and onions.",
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "veggie-burger",
@@ -1044,7 +1044,7 @@ export const allMenuItems = [
     price: 80,
     desc: "Golden potato fingers tossed in fiery African bird's eye peri-peri seasoning.",
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "cheese-baked-nachos",
@@ -1053,7 +1053,7 @@ export const allMenuItems = [
     name: "Cheese Baked Nachos",
     price: 120,
     desc: "Crispy Mexican corn tortilla chips oven-baked with savory refried beans and liquid cheddar.",
-    image: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "fully-loaded-nachos",
@@ -1063,7 +1063,7 @@ export const allMenuItems = [
     price: 160,
     desc: "Tower of tortilla chips loaded with tangy salsa, sweet corn, jalapenos, olives, sour dip, and cheese.",
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
   },
 
   // --- PIZZAS & GARLIC BREAD ---
@@ -1133,7 +1133,7 @@ export const allMenuItems = [
     name: "Cheese Corn Garlic Bread",
     price: 80,
     desc: "Golden toasted garlic bread baked with sweet corn and bubbling melted cheese.",
-    image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
   },
 
   // --- MOMOS & MASALA MAGGI ---
@@ -1212,7 +1212,7 @@ export const allMenuItems = [
     name: "Street Style Paneer Chowmein",
     price: 120,
     desc: "Spicy stir-fried street noodles tossed with soft paneer cubes and spring onions.",
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "veg-manchurian",
@@ -1230,7 +1230,7 @@ export const allMenuItems = [
     name: "Schezwan Wok Fried Rice",
     price: 120,
     desc: "Fragrant long-grain rice stir-fried with seasonal vegetables in fiery house Schezwan sauce.",
-    image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "paneer-chilli",
@@ -1241,7 +1241,7 @@ export const allMenuItems = [
     desc: "Tender paneer cubes tossed with crisp bell peppers, onions, green chillies, and dark soy.",
     isBestseller: true,
     tag: "House Favorite",
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "honey-chilli-potato",
@@ -1251,7 +1251,7 @@ export const allMenuItems = [
     price: 140,
     desc: "Crispy fried potato fingers coated in a sticky, sweet-spicy honey chilli sesame glaze.",
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "spring-roll",
@@ -1260,7 +1260,7 @@ export const allMenuItems = [
     name: "Golden Veg Spring Rolls",
     price: 120,
     desc: "Crispy thin rolls packed with stir-fried vegetables, served with sweet chilli dip.",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "crispy-corn",
@@ -1269,7 +1269,7 @@ export const allMenuItems = [
     name: "American Crispy Corn Salt & Pepper",
     price: 100,
     desc: "Crunchy sweet corn kernels tossed with black pepper, spring onion, and lime zest.",
-    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
