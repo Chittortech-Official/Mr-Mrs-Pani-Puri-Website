@@ -182,3 +182,4 @@ export default function MenuSection({ onSelectItemForOrder }) {
     </section>
   );
 }
+

@@ -153,3 +153,4 @@ export default function SpecialtiesSection({ onSelectItemForOrder }) {
     </section>
   );
 }
+

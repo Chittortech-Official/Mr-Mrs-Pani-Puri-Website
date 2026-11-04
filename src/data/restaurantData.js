@@ -1123,3 +1123,4 @@ export const scannedMenuPages = [
   { page: 7, title: "Chinese Specials & Morning Snacks", image: "/114055.jpg", desc: "Chilli paneer, hakka noodles, kachori & samosa" },
   { page: 8, title: "Chaat, Dahi Chaat & Bhelpuri", image: "/114053.jpg", desc: "Gol gappe, basket chaat, combo platter & bhel" },
 ];
+
