@@ -1,15 +1,18 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Search, Phone, MessageCircle, Clock, MapPin, Menu, X, Sparkles, Gift, ChevronRight } from 'lucide-react';
-import { restaurantInfo } from '../data/restaurantData';
+import { restaurantInfo, allMenuItems } from '../data/restaurantData';
 
 export default function HaldiramHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const searchRef = useRef(null);
   const router = useRouter();
 
   // Prevent background scrolling when mobile hamburger menu is open
@@ -24,14 +27,56 @@ export default function HaldiramHeader() {
     };
   }, [mobileMenuOpen]);
 
+  // Handle outside click to close desktop suggestions dropdown
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setShowSuggestions(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Update live suggestions as user types
+  const handleSearchChange = (val) => {
+    setSearchQuery(val);
+    const q = val.trim().toLowerCase();
+    if (q.length > 0) {
+      const matches = allMenuItems
+        .filter((item) => {
+          const nameMatch = item.name?.toLowerCase().includes(q);
+          const catMatch = item.categoryName?.toLowerCase().includes(q) || item.category?.toLowerCase().includes(q);
+          const descMatch = item.desc?.toLowerCase().includes(q);
+          const tagMatch = item.tag?.toLowerCase().includes(q);
+          return nameMatch || catMatch || descMatch || tagMatch;
+        })
+        .slice(0, 6);
+      setSuggestions(matches);
+      setShowSuggestions(true);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  };
+
   const handleSearchSubmit = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
+    setShowSuggestions(false);
     setMobileMenuOpen(false);
     if (searchQuery.trim()) {
       router.push(`/menu?q=${encodeURIComponent(searchQuery.trim())}`);
     } else {
       router.push('/menu');
     }
+  };
+
+  const handleSelectSuggestion = (itemName) => {
+    setSearchQuery(itemName);
+    setShowSuggestions(false);
+    router.push(`/menu?q=${encodeURIComponent(itemName)}`);
   };
 
   const categories = [
@@ -123,24 +168,100 @@ export default function HaldiramHeader() {
             </Link>
           </div>
 
-          {/* Central Search Bar (Desktop) */}
-          <div className="flex-1 max-w-md mx-2 hidden md:block">
+          {/* Central Search Bar with Live Suggestions (Desktop / Laptop only) */}
+          <div ref={searchRef} className="flex-1 max-w-md mx-3 hidden md:block relative">
             <form onSubmit={handleSearchSubmit} className="relative">
               <input
                 type="text"
                 placeholder="Search Pani Puri, Kachori, Biscoff, Pizza..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-4 pr-10 py-2 rounded-full bg-[#FAF7F2] border border-[#E5E0D8] focus:border-[#C4161C] focus:bg-white text-xs text-[#1F2937] placeholder-[#8C827A] outline-none transition-all shadow-inner"
+                onChange={(e) => handleSearchChange(e.target.value)}
+                onFocus={() => {
+                  if (searchQuery.trim().length > 0) setShowSuggestions(true);
+                }}
+                className="w-full pl-4 pr-16 py-2 rounded-full bg-[#FAF7F2] border border-[#E5E0D8] focus:border-[#C4161C] focus:bg-white text-xs text-[#1F2937] placeholder-[#8C827A] outline-none transition-all shadow-inner"
               />
-              <button
-                type="submit"
-                className="absolute right-1 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#C4161C] text-white flex items-center justify-center hover:bg-[#9B1117] transition-colors"
-                aria-label="Search"
-              >
-                <Search size={13} />
-              </button>
+              <div className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchQuery('');
+                      setSuggestions([]);
+                      setShowSuggestions(false);
+                    }}
+                    className="p-1 rounded-full text-[#9CA3AF] hover:text-[#1F2937] transition-colors"
+                    aria-label="Clear Search"
+                  >
+                    <X size={13} />
+                  </button>
+                )}
+                <button
+                  type="submit"
+                  className="w-7 h-7 rounded-full bg-[#C4161C] text-white flex items-center justify-center hover:bg-[#9B1117] transition-colors"
+                  aria-label="Search"
+                >
+                  <Search size={13} />
+                </button>
+              </div>
             </form>
+
+            {/* Desktop Autocomplete Suggestions Dropdown */}
+            {showSuggestions && suggestions.length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-[#ECE7DE] overflow-hidden z-50 text-left">
+                <div className="px-3.5 py-1.5 bg-[#FAF7F2] border-b border-[#ECE7DE] flex items-center justify-between text-[11px] font-bold text-[#8C827A] uppercase tracking-wider">
+                  <span>Suggestions</span>
+                  <span>{suggestions.length} items</span>
+                </div>
+                <div className="max-h-80 overflow-y-auto divide-y divide-[#F7F2EB]">
+                  {suggestions.map((item) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => handleSelectSuggestion(item.name)}
+                      className="w-full px-3.5 py-2.5 flex items-center gap-3 hover:bg-[#FFF5F0] transition-colors text-left"
+                    >
+                      <div className="relative w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-[#FAF7F2] border border-[#E5DFD7]">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-bold text-[#1F2937] truncate">
+                            {item.name}
+                          </span>
+                          {item.isBestseller && (
+                            <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-[#C4161C]/10 text-[#C4161C] font-semibold shrink-0">
+                              Bestseller
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-[10px] text-[#8C827A] truncate">
+                          {item.categoryName}
+                        </p>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <span className="text-xs font-black text-[#059669]">
+                          ₹{item.price}/-
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={() => handleSearchSubmit()}
+                  className="w-full py-2.5 bg-[#FAF7F2] hover:bg-[#FFF1E8] text-center text-xs font-bold text-[#C4161C] flex items-center justify-center gap-1 border-t border-[#ECE7DE] transition-colors"
+                >
+                  <span>View all matching results in Menu</span>
+                  <ChevronRight size={13} />
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Right Action Buttons */}
@@ -180,19 +301,6 @@ export default function HaldiramHeader() {
 
         </div>
 
-        {/* Mobile Full-Width Search Input (Visible on mobile screens) */}
-        <div className="md:hidden px-3 pb-2 pt-0.5 bg-white border-b border-[#F0EAE1]">
-          <form onSubmit={handleSearchSubmit} className="relative">
-            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" />
-            <input
-              type="text"
-              placeholder="Search Pani Puri, Kachori, Frappes..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-1.5 rounded-full bg-[#FAF7F2] border border-[#E5DFD7] text-xs text-[#1F2937] placeholder-[#9CA3AF] outline-none focus:border-[#C4161C]"
-            />
-          </form>
-        </div>
 
         {/* 3. Horizontal Category Ribbon (Desktop only - Mobile uses clean Hamburger Menu) */}
         <div className="bg-[#FAF7F2] border-b border-[#ECE7DE] hidden md:block">
