@@ -152,7 +152,7 @@ export const heroPromos = [
     ctaLink: "/menu",
     badge: "5 Authentic Waters",
     bgGradient: "from-[#7F1D1D] via-[#991B1B] to-[#C4161C]",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
     dishName: "Royal Pani Puri & Chaat Thali",
   },
   {
@@ -164,7 +164,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=snacks",
     badge: "Fresh From 6:00 AM",
     bgGradient: "from-[#831843] via-[#9F1239] to-[#BE123C]",
-    image: "https://images.unsplash.com/photo-1601050690294-397f3c324515?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=800&q=80",
     dishName: "Piping Hot Pyaaz Kachori",
   },
   {
@@ -176,7 +176,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=coldcoffee",
     badge: "Thick Shakes & Cafe",
     bgGradient: "from-[#701A75] via-[#86198F] to-[#A21CAF]",
-    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80",
     dishName: "Lotus Biscoff Frappe & Shakes",
   },
   {
@@ -188,7 +188,7 @@ export const heroPromos = [
     ctaLink: "/catering",
     badge: "Wedding Live Counters",
     bgGradient: "from-[#9A3412] via-[#C2410C] to-[#EA580C]",
-    image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
     dishName: "Live Event Counters",
   },
 ];
