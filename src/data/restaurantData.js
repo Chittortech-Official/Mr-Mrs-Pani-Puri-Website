@@ -35,6 +35,7 @@ export const mainCategories = [
   {
     id: "chaat",
     name: "Chaat & Gol Gappe",
+    shortName: "Pani Puri",
     slug: "chaat",
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
     itemCount: "8 Varieties",
@@ -43,6 +44,7 @@ export const mainCategories = [
   {
     id: "dahichaat",
     name: "Royal Dahi Chaats",
+    shortName: "Dahi Chaat",
     slug: "dahichaat",
     image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80",
     itemCount: "9 Varieties",
@@ -51,6 +53,7 @@ export const mainCategories = [
   {
     id: "snacks",
     name: "Morning Hot Snacks",
+    shortName: "Pyaaz Kachori",
     slug: "snacks",
     image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
     itemCount: "7 Varieties",
@@ -59,6 +62,7 @@ export const mainCategories = [
   {
     id: "bhel",
     name: "Bhelpuri & Farsan",
+    shortName: "Bhelpuri",
     slug: "bhel",
     image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80",
     itemCount: "4 Varieties",
@@ -67,6 +71,7 @@ export const mainCategories = [
   {
     id: "hotdrinks",
     name: "Artisan Coffee & Hot Choc",
+    shortName: "Hot Coffee",
     slug: "hotdrinks",
     image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80",
     itemCount: "12 Varieties",
@@ -75,6 +80,7 @@ export const mainCategories = [
   {
     id: "coldcoffee",
     name: "Cold Coffee & Frappes",
+    shortName: "Cold Coffee",
     slug: "coldcoffee",
     image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
     itemCount: "10 Varieties",
@@ -83,6 +89,7 @@ export const mainCategories = [
   {
     id: "shakes",
     name: "Gourmet Thick Shakes",
+    shortName: "Thick Shakes",
     slug: "shakes",
     image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
     itemCount: "16 Varieties",
@@ -91,6 +98,7 @@ export const mainCategories = [
   {
     id: "mocktails",
     name: "Mocktails & Slushies",
+    shortName: "Mocktails",
     slug: "mocktails",
     image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80",
     itemCount: "12 Varieties",
@@ -98,7 +106,8 @@ export const mainCategories = [
   },
   {
     id: "burgers",
-    name: "Burgers, Sandwiches & Fries",
+    name: "Burgers & Sandwiches",
+    shortName: "Burgers",
     slug: "burgers",
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
     itemCount: "14 Varieties",
@@ -107,6 +116,7 @@ export const mainCategories = [
   {
     id: "pizza",
     name: "Pizzas & Garlic Bread",
+    shortName: "Pizzas",
     slug: "pizza",
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
     itemCount: "10 Varieties",
@@ -115,6 +125,7 @@ export const mainCategories = [
   {
     id: "momos",
     name: "Momos & Masala Maggi",
+    shortName: "Momos",
     slug: "momos",
     image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80",
     itemCount: "10 Varieties",
@@ -123,6 +134,7 @@ export const mainCategories = [
   {
     id: "chinese",
     name: "Chinese Wok Specials",
+    shortName: "Chinese",
     slug: "chinese",
     image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80",
     itemCount: "11 Varieties",

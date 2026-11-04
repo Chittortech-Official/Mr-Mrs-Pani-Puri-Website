@@ -159,21 +159,21 @@ export default function Home() {
       {/* 2. Haldiram Style "Shop By Category" Grid */}
       <section className="py-8 sm:py-12 bg-white border-b border-[#F0EAE1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between gap-2 mb-6">
+          <div className="flex items-end justify-between gap-3 mb-6 pb-2.5 border-b border-[#ECE7DE]">
             <div>
-              <h2 className="text-lg sm:text-2xl font-bold text-[#1F2937] tracking-tight">
-                Explore By Category
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#C4161C] block mb-0.5">
+                Fresh From Kitchen
+              </span>
+              <h2 className="font-serif text-lg sm:text-2xl md:text-3xl font-bold text-[#1F2937] tracking-tight">
+                Explore Categories
               </h2>
-              <p className="text-[11px] sm:text-xs text-[#6B7280]">
-                Fresh street food, chaats, morning kachoris & café delights
-              </p>
             </div>
             <Link
               href="/menu"
-              className="text-xs sm:text-sm font-bold text-[#C4161C] hover:underline flex items-center gap-1 shrink-0 whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FFF1E8] border border-[#FDD5C2] text-[#C4161C] hover:bg-[#C4161C] hover:text-white transition-colors text-xs font-bold shrink-0 shadow-xs"
             >
-              <span>View All</span>
-              <ArrowRight size={14} />
+              <span>View All Menu</span>
+              <ArrowRight size={13} />
             </Link>
           </div>
 
@@ -184,7 +184,7 @@ export default function Home() {
                 href={`/menu?cat=${cat.id}`}
                 className="group flex flex-col items-center text-center p-2 sm:p-3 rounded-2xl bg-[#FFFBF8] border border-[#F3EDE2] hover:border-[#C4161C] hover:shadow-md transition-all"
               >
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden border border-[#E5E0D8] group-hover:border-[#C4161C] mb-2 sm:mb-3 transition-colors shadow-xs bg-white">
+                <div className="relative w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[#E5E0D8] group-hover:border-[#C4161C] mb-1.5 sm:mb-2 transition-colors shadow-xs bg-white">
                   <Image
                     src={cat.image}
                     alt={cat.name}
@@ -192,12 +192,9 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-[11px] sm:text-xs md:text-sm text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-tight mb-0.5 line-clamp-1">
-                  {cat.name}
+                <h3 className="font-bold text-[11px] sm:text-xs md:text-sm text-[#1F2937] group-hover:text-[#C4161C] transition-colors leading-tight min-h-[26px] flex items-center justify-center text-center">
+                  {cat.shortName || cat.name}
                 </h3>
-                <span className="text-[10px] text-[#9CA3AF] font-medium hidden xs:inline">
-                  {cat.itemCount}
-                </span>
               </Link>
             ))}
           </div>
@@ -208,25 +205,25 @@ export default function Home() {
       <section className="py-14 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-10 pb-4 border-b border-[#E5DFD7]">
+          <div className="flex items-end justify-between gap-3 mb-8 pb-3 border-b border-[#E5DFD7]">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C4161C] block mb-1">
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#C4161C] block mb-0.5">
                 Customer Favorites
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F2937]">
+              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#1F2937]">
                 Best Selling Delicacies
               </h2>
             </div>
             <Link
               href="/menu"
-              className="text-xs sm:text-sm font-bold text-[#C4161C] hover:text-[#9B1117] flex items-center gap-1"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FFF1E8] border border-[#FDD5C2] text-[#C4161C] hover:bg-[#C4161C] hover:text-white transition-colors text-xs font-bold shrink-0 shadow-xs"
             >
-              <span>See Full 70+ Items Catalog</span>
-              <ArrowRight size={15} />
+              <span>Full Catalog</span>
+              <ArrowRight size={13} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {bestsellers.map((item) => (
               <div
                 key={item.id}
