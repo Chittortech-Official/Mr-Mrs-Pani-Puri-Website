@@ -152,7 +152,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=chaat",
     badge: "5 Authentic Waters",
     bgGradient: "from-[#7F1D1D] via-[#991B1B] to-[#C4161C]",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=80",
     dishName: "Royal Pani Puri & Chaat Thali",
   },
   {
@@ -176,7 +176,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=dahichaat",
     badge: "Royal Special",
     bgGradient: "from-[#881337] via-[#9F1239] to-[#BE123C]",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=1400&q=80",
     dishName: "Dahi Sev Puri Supreme",
   },
   {
