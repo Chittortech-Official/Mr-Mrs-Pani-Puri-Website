@@ -36,7 +36,7 @@ export default function Home() {
       {/* Header */}
       <HaldiramHeader />
 
-      {/* 1. Hero Promotional Food Banner Carousel (Pure Food Photos - NO TEXT ON TOP) */}
+      {/* 1. Hero Promotional Food Banner Carousel (Pure Food Photos - NO TEXT & NO DOTS) */}
       <section className="relative w-full overflow-hidden bg-[#FAF7F2]">
         <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] md:aspect-[24/9] max-h-[500px] min-h-[220px] sm:min-h-[340px]">
           {heroPromos.map((promo, idx) => (
@@ -56,23 +56,6 @@ export default function Home() {
               />
             </Link>
           ))}
-
-          {/* Dots Indicator */}
-          <div className="absolute bottom-2.5 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 shadow-md">
-            {heroPromos.map((_, i) => (
-              <button
-                key={i}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setCurrentSlide(i);
-                }}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === currentSlide ? 'w-6 bg-[#FDE047]' : 'w-1.5 bg-white/60 hover:bg-white'
-                }`}
-                aria-label={`Slide ${i + 1}`}
-              />
-            ))}
-          </div>
         </div>
       </section>
 
