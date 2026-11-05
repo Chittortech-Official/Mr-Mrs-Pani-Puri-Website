@@ -372,7 +372,7 @@ export const allMenuItems = [
     name: "Dahi French Fries Chaat",
     price: 60,
     desc: "Fusion delicacy of crispy golden fries swirled in spiced dahi, chutneys, and chaat spices.",
-    image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "dahi-tokri-chaat",
@@ -695,7 +695,7 @@ export const allMenuItems = [
     name: "Creamy Iced Coffee",
     price: 100,
     desc: "Smooth espresso poured over ice and crowned with sweet whipping cream.",
-    image: "https://images.unsplash.com/photo-1517701632971-77ad8b020312?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "biscoff-frappe",
@@ -706,7 +706,7 @@ export const allMenuItems = [
     desc: "Signature cold frappe blended with Lotus Biscoff butter and crunchy caramelized biscuits.",
     isBestseller: true,
     tag: "Must Try",
-    image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "iced-americano",
@@ -724,7 +724,7 @@ export const allMenuItems = [
     name: "Iced Latte",
     price: 100,
     desc: "Chilled whole milk poured over ice with a rich floating layer of freshly brewed espresso.",
-    image: "https://images.unsplash.com/photo-1517701632971-77ad8b020312?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "vanilla-sweet-cream-cold-latte",
