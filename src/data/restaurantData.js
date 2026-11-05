@@ -46,7 +46,7 @@ export const mainCategories = [
     name: "Royal Dahi Chaats",
     shortName: "Dahi Chaat",
     slug: "dahichaat",
-    image: "https://images.unsplash.com/photo-1732519970445-8f2d6998961f?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
     itemCount: "9 Items",
     desc: "Thick whipped sweetened curd, saunth chutney & savory sev",
   },
@@ -55,7 +55,7 @@ export const mainCategories = [
     name: "Morning Hot Snacks",
     shortName: "Pyaaz Kachori",
     slug: "snacks",
-    image: "https://images.unsplash.com/photo-1601050690294-397f3c324515?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=600&q=80",
     itemCount: "7 Items",
     desc: "Jodhpur pyaaz kachori, samosa, mirchi bada & hot indori poha",
   },
@@ -164,7 +164,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=snacks",
     badge: "Fresh From 6:00 AM",
     bgGradient: "from-[#831843] via-[#9F1239] to-[#BE123C]",
-    image: "https://images.unsplash.com/photo-1601050690294-397f3c324515?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=1600&q=80",
     dishName: "Piping Hot Pyaaz Kachori & Samosa",
   },
   {
@@ -176,7 +176,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=dahichaat",
     badge: "Royal Special",
     bgGradient: "from-[#881337] via-[#9F1239] to-[#BE123C]",
-    image: "https://images.unsplash.com/photo-1732519970445-8f2d6998961f?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=80",
     dishName: "Dahi Sev Puri Supreme",
   },
   {
@@ -188,7 +188,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=pizza",
     badge: "Cheese Burst",
     bgGradient: "from-[#7C2D12] via-[#9A3412] to-[#C2410C]",
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=1600&q=80",
     dishName: "Paneer Tandoori Pizza",
   },
   {
@@ -212,7 +212,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=momos",
     badge: "Fresh Steamed",
     bgGradient: "from-[#9F1239] via-[#BE123C] to-[#E11D48]",
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1676955757360-f9a02bab557d?auto=format&fit=crop&w=1600&q=80",
     dishName: "Hot Steamed Momos",
   },
   {
