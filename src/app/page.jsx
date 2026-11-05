@@ -45,9 +45,8 @@ export default function Home() {
               <Link
                 key={promo.title}
                 href={promo.ctaLink || '/menu'}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out block ${
-                  idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                }`}
+                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out block ${idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                  }`}
               >
                 <Image
                   src={promo.image}

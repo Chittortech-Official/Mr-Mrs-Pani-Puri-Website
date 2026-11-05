@@ -119,9 +119,11 @@ export default function HaldiramFooter() {
             <li><Link href="/menu?cat=chaat" className="hover:text-white transition-colors">Chaat & Gol Gappe</Link></li>
             <li><Link href="/menu?cat=dahichaat" className="hover:text-white transition-colors">Royal Dahi Chaats</Link></li>
             <li><Link href="/menu?cat=snacks" className="hover:text-white transition-colors">Jodhpur Pyaaz Kachori & Samosa</Link></li>
-            <li><Link href="/menu?cat=shakes" className="hover:text-white transition-colors">Artisan Cold Shakes & Frappes</Link></li>
-            <li><Link href="/menu?cat=pizza" className="hover:text-white transition-colors">Stone-Baked Pizzas & Burgers</Link></li>
-            <li><Link href="/menu?cat=chinese" className="hover:text-white transition-colors">Momos & Chinese Specials</Link></li>
+            <li><Link href="/menu?cat=coldcoffee" className="hover:text-white transition-colors">Cold Coffee & Frappes</Link></li>
+            <li><Link href="/menu?cat=shakes" className="hover:text-white transition-colors">Gourmet Thick Shakes</Link></li>
+            <li><Link href="/menu?cat=pizza" className="hover:text-white transition-colors">Stone-Baked Pizzas</Link></li>
+            <li><Link href="/menu?cat=burgers" className="hover:text-white transition-colors">Burgers & Sandwiches</Link></li>
+            <li><Link href="/menu?cat=momos" className="hover:text-white transition-colors">Momos & Masala Maggi</Link></li>
           </ul>
         </div>
 

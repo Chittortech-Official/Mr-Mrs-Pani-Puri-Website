@@ -55,7 +55,7 @@ export const mainCategories = [
     name: "Morning Hot Snacks",
     shortName: "Pyaaz Kachori",
     slug: "snacks",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1601050690294-397f3c324515?auto=format&fit=crop&w=600&q=80",
     itemCount: "7 Items",
     desc: "Jodhpur pyaaz kachori, samosa, mirchi bada & hot indori poha",
   },
@@ -311,7 +311,7 @@ export const allMenuItems = [
     desc: "Edible fried potato basket loaded with spiced potatoes, sprouts, chutneys, and pomegranate jewels.",
     isBestseller: true,
     tag: "Royal Specialty",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1601050690294-397f3c324515?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "combo-chaat",
@@ -434,7 +434,7 @@ export const allMenuItems = [
     price: 40,
     desc: "Authentic Chowpatty-style bhel laced with date-tamarind chutney, spicy green chilli paste, and garlic chutney.",
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1601050690294-397f3c324515?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "puneri-matki-bhel",

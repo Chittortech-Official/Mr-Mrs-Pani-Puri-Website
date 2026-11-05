@@ -3,7 +3,7 @@
 import React, { useState, useMemo, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Search, MessageCircle, Filter, ArrowUpDown, Sparkles, Check, ChevronRight, X } from 'lucide-react';
 import HaldiramHeader from '../../components/HaldiramHeader';
 import HaldiramFooter from '../../components/HaldiramFooter';
@@ -11,6 +11,7 @@ import FloatingWidgets from '../../components/FloatingWidgets';
 import { allMenuItems, restaurantInfo, mainCategories } from '../../data/restaurantData';
 
 function MenuContent() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('cat') || 'all';
   const initialQuery = searchParams.get('q') || '';
@@ -24,17 +25,27 @@ function MenuContent() {
     ...mainCategories.map((c) => ({ id: c.id, name: c.name })),
   ];
 
-  // Sync state when URL params change (e.g. from header search bar on laptop)
+  // Sync state when URL params change (e.g. from header search bar on laptop, drawer links, or home icons)
   React.useEffect(() => {
     const q = searchParams.get('q');
     const cat = searchParams.get('cat');
-    if (q !== null) {
+    if (q) {
       setSearchQuery(q);
       setSelectedCategory('all');
-    } else if (cat !== null) {
+    } else if (cat) {
       setSelectedCategory(cat);
+      setSearchQuery('');
+    } else {
+      setSelectedCategory('all');
+      setSearchQuery('');
     }
   }, [searchParams]);
+
+  const handleSelectCategory = (catId) => {
+    setSelectedCategory(catId);
+    setSearchQuery('');
+    router.replace(catId === 'all' ? '/menu' : `/menu?cat=${catId}`, { scroll: false });
+  };
 
   const filteredItems = useMemo(() => {
     const q = searchQuery.toLowerCase().trim();
@@ -124,7 +135,7 @@ function MenuContent() {
               <Filter size={13} className="text-[#C4161C] shrink-0" />
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={(e) => handleSelectCategory(e.target.value)}
                 className="bg-transparent text-xs font-bold text-[#1F2937] outline-none cursor-pointer max-w-[140px] xs:max-w-[180px] truncate"
                 aria-label="Filter by Category"
               >
@@ -165,7 +176,7 @@ function MenuContent() {
               {categories.map((c) => (
                 <li key={c.id}>
                   <button
-                    onClick={() => setSelectedCategory(c.id)}
+                    onClick={() => handleSelectCategory(c.id)}
                     className={`w-full text-left px-3 py-2 rounded-xl transition-colors flex items-center justify-between ${
                       selectedCategory === c.id
                         ? 'bg-[#C4161C] text-white font-bold shadow-sm'

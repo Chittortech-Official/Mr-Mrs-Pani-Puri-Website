@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Search, MessageCircle, MapPin, Menu, X, Sparkles, Gift, ChevronRight } from 'lucide-react';
-import { restaurantInfo, allMenuItems } from '../data/restaurantData';
+import { restaurantInfo, allMenuItems, mainCategories } from '../data/restaurantData';
 
 export default function HaldiramHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -81,17 +81,14 @@ export default function HaldiramHeader() {
 
   const categories = [
     { name: 'All Categories', href: '/menu' },
-    { name: 'Chaat & Gol Gappe', href: '/menu?cat=chaat' },
-    { name: 'Royal Dahi Chaat', href: '/menu?cat=dahichaat' },
-    { name: 'Morning Hot Snacks', href: '/menu?cat=snacks' },
-    { name: 'Bhelpuri', href: '/menu?cat=bhel' },
-    { name: 'Cold Coffee & Frappes', href: '/menu?cat=coldcoffee' },
-    { name: 'Gourmet Shakes', href: '/menu?cat=shakes' },
-    { name: 'Pizzas & Burgers', href: '/menu?cat=burgers' },
-    { name: 'Momos & Chinese', href: '/menu?cat=chinese' },
+    ...mainCategories.map((c) => ({
+      name: c.name,
+      href: `/menu?cat=${c.id}`,
+    })),
     { name: 'Bulk Orders & Catering', href: '/catering' },
-    { name: 'Our Story', href: '/about' },
-    { name: 'Store Location', href: '/contact' },
+    { name: 'Our Story & Heritage', href: '/about' },
+    { name: 'Customer Reviews', href: '/reviews' },
+    { name: 'Store Location & Map', href: '/contact' },
   ];
 
   return (
