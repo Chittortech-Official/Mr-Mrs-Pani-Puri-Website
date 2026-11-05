@@ -176,7 +176,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=dahichaat",
     badge: "Royal Special",
     bgGradient: "from-[#881337] via-[#9F1239] to-[#BE123C]",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1732519970445-8f2d6998961f?auto=format&fit=crop&w=1600&q=80",
     dishName: "Dahi Sev Puri Supreme",
   },
   {

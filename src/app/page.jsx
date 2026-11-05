@@ -37,45 +37,44 @@ export default function Home() {
       {/* Header */}
       <HaldiramHeader />
 
-      {/* 1. Best-in-Class Aesthetic Pure Food Banner Carousel (NO Text & NO Dots) */}
-      <section className="w-full bg-[#FFFDFB] pt-2 sm:pt-4 pb-2 sm:pb-3">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] md:aspect-[24/9] max-h-[460px] min-h-[190px] sm:min-h-[300px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md sm:shadow-lg border border-[#F3EDE2] group bg-[#FAF7F2]">
-            {heroPromos.map((promo, idx) => (
-              <Link
-                key={promo.title}
-                href={promo.ctaLink || '/menu'}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out block ${idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                  }`}
-              >
-                <Image
-                  src={promo.image}
-                  alt={promo.dishName || promo.title}
-                  fill
-                  priority={idx === 0}
-                  className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
-                />
-              </Link>
-            ))}
+      {/* 1. Best-in-Class Edge-to-Edge Pure Food Banner Carousel (NO Text & NO Dots) */}
+      <section className="relative w-full overflow-hidden bg-[#FAF7F2] border-b border-[#EFE8DC]">
+        <div className="relative w-full h-[240px] xs:h-[280px] sm:h-[380px] md:h-[460px] lg:h-[500px] group">
+          {heroPromos.map((promo, idx) => (
+            <Link
+              key={promo.title}
+              href={promo.ctaLink || '/menu'}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out block ${
+                idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+              }`}
+            >
+              <Image
+                src={promo.image}
+                alt={promo.dishName || promo.title}
+                fill
+                priority={idx === 0}
+                className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
+              />
+            </Link>
+          ))}
 
-            {/* Desktop Navigation Arrows (Subtle on hover) */}
-            <button
-              type="button"
-              onClick={prevSlide}
-              aria-label="Previous Banner"
-              className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 transition-all shadow-md"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              type="button"
-              onClick={nextSlide}
-              aria-label="Next Banner"
-              className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white items-center justify-center backdrop-blur-md border border-white/20 opacity-0 group-hover:opacity-100 transition-all shadow-md"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
+          {/* Desktop Left/Right Navigation Arrows (Subtle on hover) */}
+          <button
+            type="button"
+            onClick={prevSlide}
+            aria-label="Previous Banner"
+            className="hidden sm:flex absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 text-white items-center justify-center backdrop-blur-md border border-white/25 opacity-0 group-hover:opacity-100 transition-all shadow-lg hover:scale-105"
+          >
+            <ChevronLeft size={22} />
+          </button>
+          <button
+            type="button"
+            onClick={nextSlide}
+            aria-label="Next Banner"
+            className="hidden sm:flex absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 text-white items-center justify-center backdrop-blur-md border border-white/25 opacity-0 group-hover:opacity-100 transition-all shadow-lg hover:scale-105"
+          >
+            <ChevronRight size={22} />
+          </button>
         </div>
       </section>
 
