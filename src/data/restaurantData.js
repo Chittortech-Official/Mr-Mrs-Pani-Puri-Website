@@ -152,7 +152,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=chaat",
     badge: "5 Authentic Waters",
     bgGradient: "from-[#7F1D1D] via-[#991B1B] to-[#C4161C]",
-    image: "/food/panipuri.jpg",
+    image: "/food/generated/banner_panipuri.jpg",
     dishName: "Royal Pani Puri & 5 Waters",
   },
   {
@@ -164,7 +164,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=snacks",
     badge: "Fresh From 6:00 AM",
     bgGradient: "from-[#831843] via-[#9F1239] to-[#BE123C]",
-    image: "/food/kachori.jpg",
+    image: "/food/generated/banner_kachori.jpg",
     dishName: "Jodhpur Khasta Pyaaz Kachori",
   },
   {
@@ -176,7 +176,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=dahichaat",
     badge: "Royal Special",
     bgGradient: "from-[#881337] via-[#9F1239] to-[#BE123C]",
-    image: "/food/dahichaat.jpg",
+    image: "/food/generated/banner_dahichaat.jpg",
     dishName: "Royal Dahi Sev Batata Puri",
   },
   {
