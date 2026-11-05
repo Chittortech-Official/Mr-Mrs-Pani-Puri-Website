@@ -37,44 +37,53 @@ export default function Home() {
       {/* Header */}
       <HaldiramHeader />
 
-      {/* 1. Best-in-Class Edge-to-Edge Pure Food Banner Carousel (NO Text & NO Dots) */}
-      <section className="relative w-full overflow-hidden bg-[#FAF7F2] border-b border-[#EFE8DC]">
-        <div className="relative w-full h-[240px] xs:h-[280px] sm:h-[380px] md:h-[460px] lg:h-[500px] group">
-          {heroPromos.map((promo, idx) => (
-            <Link
-              key={promo.title}
-              href={promo.ctaLink || '/menu'}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out block ${
-                idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-              }`}
-            >
-              <Image
-                src={promo.image}
-                alt={promo.dishName || promo.title}
-                fill
-                priority={idx === 0}
-                className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
-              />
-            </Link>
-          ))}
+      {/* 1. Best-in-Class Gourmet Food Banner Carousel (Laptop & Mobile Optimized) */}
+      <section className="w-full bg-[#FFFDFB] pt-2 pb-3 sm:pt-4 sm:pb-5">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="relative w-full h-[220px] xs:h-[260px] sm:h-[320px] md:h-[360px] lg:h-[390px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md sm:shadow-xl border border-[#EBE4D8] bg-[#1A1615] group">
+            {heroPromos.map((promo, idx) => (
+              <Link
+                key={promo.title}
+                href={promo.ctaLink || '/menu'}
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out block ${
+                  idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                }`}
+              >
+                <Image
+                  src={promo.image}
+                  alt={promo.dishName || promo.title}
+                  fill
+                  priority={idx === 0}
+                  className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
+                />
+              </Link>
+            ))}
 
-          {/* Desktop Left/Right Navigation Arrows (Subtle on hover) */}
-          <button
-            type="button"
-            onClick={prevSlide}
-            aria-label="Previous Banner"
-            className="hidden sm:flex absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 text-white items-center justify-center backdrop-blur-md border border-white/25 opacity-0 group-hover:opacity-100 transition-all shadow-lg hover:scale-105"
-          >
-            <ChevronLeft size={22} />
-          </button>
-          <button
-            type="button"
-            onClick={nextSlide}
-            aria-label="Next Banner"
-            className="hidden sm:flex absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 text-white items-center justify-center backdrop-blur-md border border-white/25 opacity-0 group-hover:opacity-100 transition-all shadow-lg hover:scale-105"
-          >
-            <ChevronRight size={22} />
-          </button>
+            {/* Desktop Left / Right Navigation Arrows (Always visible on laptop, clean glassmorphism) */}
+            <button
+              type="button"
+              onClick={prevSlide}
+              aria-label="Previous Slide"
+              className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 hover:bg-[#C4161C] text-[#1F2937] hover:text-white items-center justify-center backdrop-blur-md border border-white/60 shadow-lg transition-all hover:scale-105"
+            >
+              <ChevronLeft size={22} />
+            </button>
+            <button
+              type="button"
+              onClick={nextSlide}
+              aria-label="Next Slide"
+              className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 hover:bg-[#C4161C] text-[#1F2937] hover:text-white items-center justify-center backdrop-blur-md border border-white/60 shadow-lg transition-all hover:scale-105"
+            >
+              <ChevronRight size={22} />
+            </button>
+
+            {/* Subtle Minimalist Slide Counter (Bottom Right) */}
+            <div className="hidden sm:flex absolute bottom-3.5 right-4 z-20 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold tracking-wider items-center gap-1.5 shadow-md pointer-events-none">
+              <span className="text-[#FDE047]">{currentSlide + 1}</span>
+              <span className="text-white/40">/</span>
+              <span>{heroPromos.length}</span>
+            </div>
+          </div>
         </div>
       </section>
 

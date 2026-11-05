@@ -215,12 +215,31 @@ export default function HaldiramHeader() {
             )}
           </div>
 
-          {/* Right Corner: Bulk Orders (Desktop) + Hamburger Menu Button */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {/* Right Corner: Desktop Nav Links + Bulk Orders + Menu */}
+          <div className="flex items-center gap-2.5 sm:gap-4 shrink-0">
+            {/* Desktop Navigation Links (Laptop / PC) */}
+            <nav className="hidden lg:flex items-center gap-4 text-xs font-bold text-[#4A403A]">
+              <Link href="/menu" className="hover:text-[#C4161C] transition-colors">
+                Complete Menu
+              </Link>
+              <Link href="/catering" className="hover:text-[#C4161C] transition-colors">
+                Event Catering
+              </Link>
+              <Link href="/reviews" className="hover:text-[#C4161C] transition-colors">
+                Reviews
+              </Link>
+              <Link href="/about" className="hover:text-[#C4161C] transition-colors">
+                Our Story
+              </Link>
+              <Link href="/contact" className="hover:text-[#C4161C] transition-colors">
+                Store Location
+              </Link>
+            </nav>
+
             {/* Catering shortcut (Desktop) */}
             <Link
               href="/catering"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#D97706] text-[#B45309] hover:bg-[#FFFBEB] text-xs font-bold uppercase tracking-wider transition-all"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D97706] text-[#B45309] hover:bg-[#FFFBEB] text-xs font-bold uppercase tracking-wider transition-all"
             >
               <Gift size={13} />
               <span>Bulk Orders</span>
@@ -229,11 +248,11 @@ export default function HaldiramHeader() {
             {/* Hamburger Button (Right Corner) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold shrink-0"
+              className="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-[#ECE7DE] bg-[#FAF7F2] text-[#1F2937] hover:bg-[#C4161C] hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold shrink-0 shadow-xs"
               aria-label="Open Navigation Menu"
             >
-              <Menu size={19} />
-              <span className="hidden sm:inline">Menu</span>
+              <Menu size={18} />
+              <span className="hidden sm:inline">All Categories</span>
             </button>
           </div>
 
