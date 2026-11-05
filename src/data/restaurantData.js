@@ -46,7 +46,7 @@ export const mainCategories = [
     name: "Royal Dahi Chaats",
     shortName: "Dahi Chaat",
     slug: "dahichaat",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1788621138170-6854f17c9e2e?auto=format&fit=crop&w=600&q=80",
     itemCount: "9 Items",
     desc: "Thick whipped sweetened curd, saunth chutney & savory sev",
   },
@@ -55,7 +55,7 @@ export const mainCategories = [
     name: "Morning Hot Snacks",
     shortName: "Pyaaz Kachori",
     slug: "snacks",
-    image: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80",
     itemCount: "7 Items",
     desc: "Jodhpur pyaaz kachori, samosa, mirchi bada & hot indori poha",
   },
@@ -164,7 +164,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=snacks",
     badge: "Fresh From 6:00 AM",
     bgGradient: "from-[#831843] via-[#9F1239] to-[#BE123C]",
-    image: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=1600&q=80",
     dishName: "Piping Hot Pyaaz Kachori & Samosa",
   },
   {
@@ -176,7 +176,7 @@ export const heroPromos = [
     ctaLink: "/menu?cat=dahichaat",
     badge: "Royal Special",
     bgGradient: "from-[#881337] via-[#9F1239] to-[#BE123C]",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1788621138170-6854f17c9e2e?auto=format&fit=crop&w=1600&q=80",
     dishName: "Dahi Sev Puri Supreme",
   },
   {
@@ -280,7 +280,7 @@ export const allMenuItems = [
     desc: "Golden-crisped potato cutlet topped with aromatic spiced chhole, yoghurt, and signature chutneys.",
     isBestseller: true,
     tag: "Popular",
-    image: "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1788621138170-6854f17c9e2e?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "samosa-chaat",
@@ -393,7 +393,7 @@ export const allMenuItems = [
     desc: "Melt-in-mouth urad dal vadas and crispy papdi immersed in sweetened whipped yoghurt with secret spices.",
     isBestseller: true,
     tag: "Haldiram Classic",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1680764955303-81618ecb67b5?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "dahi-vada",
@@ -868,7 +868,7 @@ export const allMenuItems = [
     desc: "Royal Rajasthani celebration shake loaded with saffron, cardamom, pistachios, and almonds.",
     isBestseller: true,
     tag: "Luxury Royal",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "biscoff-shake",
