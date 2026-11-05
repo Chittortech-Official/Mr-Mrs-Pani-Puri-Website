@@ -40,7 +40,7 @@ export default function Home() {
       {/* 1. Best-in-Class Gourmet Food Banner Carousel (Laptop & Mobile Optimized) */}
       <section className="w-full bg-[#FFFDFB] pt-2 pb-3 sm:pt-4 sm:pb-5">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="relative w-full h-[220px] xs:h-[260px] sm:h-[320px] md:h-[360px] lg:h-[390px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md sm:shadow-xl border border-[#EBE4D8] bg-[#1A1615] group">
+          <div className="relative w-full h-[220px] xs:h-[260px] sm:h-[320px] md:h-[360px] lg:h-[390px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md sm:shadow-xl border border-[#EBE4D8] bg-[#FAF7F2] group">
             {heroPromos.map((promo, idx) => (
               <Link
                 key={promo.title}
